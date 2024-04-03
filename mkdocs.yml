@@ -1,6 +1,6 @@
-site_name: MkLorum
-site_url: https://example.com/
+site_name: LingeBot Manual
+site_url: https://RadekMocek.github.io/PDO/
 theme: readthedocs
 nav:
-  - Home: index.md
+  - Úvod: index.md
   - Docker: docker.md
