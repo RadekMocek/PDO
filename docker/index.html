@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/docker/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Docker - LingeBot Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Docker";
+        var mkdocs_page_input_path = "docker.md";
+        var mkdocs_page_url = "/PDO/docker/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> LingeBot Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Úvod</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Docker</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">LingeBot Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Docker</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="spusteni-lingebota-na-platforme-docker">Spuštění LingeBota na platformě Docker</h1>
+<p><strong>1.</strong> Naklonujte si repozitář <code>RadekMocek/BP</code> a přesuňte se do složky <code>BP/Bot/</code></p>
+<pre><code class="language-shell">mkdir LingeBot
+cd LingeBot/
+git clone https://github.com/RadekMocek/BP
+cd BP/Bot/
+</code></pre>
+<p><strong>2.</strong> Vytvořte a vyplňte soubor <code>config.json</code> (lze využít <code>config-example.json</code>)</p>
+<pre><code class="language-shell">cp config-example.json config.json
+vim config.json
+</code></pre>
+<pre><code class="language-json">{
+  &quot;tokenProduction&quot;: &quot;token_for_main_bot_account&quot;,
+  &quot;tokenTesting&quot;: &quot;token_for_secondary_bot_account&quot;,
+  &quot;isProduction&quot;: true,
+  &quot;secret1&quot;: &quot;link_to_google_forms&quot;
+}
+</code></pre>
+<details>
+  <summary>Poznámka ke kofiguraci `config.json`</summary>
+
+  Konfigurace obsahuje dva tokeny pro snadnější přepínání mezi produkčním a testovacím botem.<br>
+  Produkční bot je ten, který běží 24/7 a je používán koncovými uživateli. Jeho token je hodnotou `tokenProduction`.<br>
+  Testovací bot je ten, který se používá příležitostně pro testování nových funkcí vývojářem. Jeho token je hodnotou `tokenTesting`.<br>
+
+  Hodnota `isProduction` přepíná mezi produkčním a testovacím botem: `true` pro produkční a `false` pro testovací.<br>
+  Pokud není potřeba testovacího bota, je možné ponechat `isProduction` nastaveno na `true` a vyplnit token pouze pro `tokenProduction`. Dokud není nastaveno `isProduction` na `false`, na hodnotě `tokenTesting` nezáleží.<br>
+
+  `secret1` momentálně slouží pro uchování odkazu na dotazník, v pozdějších verzích bude pravděpodobně odstraněn.
+
+</details>
+
+<p><strong>3.</strong> Sestavte Docker image</p>
+<pre><code class="language-shell">docker build --tag lingebot .
+</code></pre>
+<p><strong>4.</strong> Spusťte Docker container</p>
+<p>Pro první spuštění použijte:</p>
+<pre><code class="language-shell">docker run --name lingecontainer -d lingebot
+</code></pre>
+<p>Pro následující spuštění použijte:</p>
+<pre><code class="language-shell">docker start lingecontainer
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Úvod"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
