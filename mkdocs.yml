@@ -1,0 +1,6 @@
+site_name: MkLorum
+site_url: https://example.com/
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Docker: docker.md
