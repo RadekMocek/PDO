@@ -1,5 +1,10 @@
 # PDO
 
+* `mkdocs serve`
+* `mkdocs gh-deploy`
+
+---
+
 * Dokumentovaným softwarem je Discord bot pro výklad a příklady z matematiky
 * Hlavní instance bota je veřejně dostupná a koncoví uživatelé ji mohou používat
 * Bot je ale navržen i na self-host vlastní instance, do které je možné přidávat vlastní obsah

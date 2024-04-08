@@ -1,17 +1,13 @@
-# Welcome to MkDocs
+# Vítejte <br>⚠ NA DOKUMENTACI SE PRACUJE<br>⚠ WORK IN PROGRESS
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Nacházíte se na stránkách manuálu pro Discord bota LingeBot.
 
-## Commands
+## Rychlé odkazy
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### Zvací odkaz bota
 
-## Project layout
+[https://discord.com/oauth2/authorize<br>?client_id=1160906076179415070<br>&permissions=2416045056<br>&scope=bot+applications.commands](https://discord.com/oauth2/authorize?client_id=1160906076179415070&permissions=2416045056&scope=bot+applications.commands)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### GitHub repozitář
+
+<https://github.com/RadekMocek/BP>
