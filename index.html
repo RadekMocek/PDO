@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>LingeBot manuál</title>
+    <title>Obsah manuálu - LingeBot manuál</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "\u00davod";
+        var mkdocs_page_name = "Obsah manu\u00e1lu";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = "/PDO/";
       </script>
@@ -39,19 +39,18 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href=".">Úvod</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#rychle-odkazy">Rychlé odkazy</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#zvaci-odkaz-bota">Zvací odkaz bota</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#github-repozitar">GitHub repozitář</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="quicklinks/">Rychlé odkazy</a>
                 </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href=".">Obsah manuálu</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="concepts/">Důležité pojmy</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Jak začít</span></p>
               <ul>
@@ -59,17 +58,46 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="h.md">Založení účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="h.md">Vytvoření serveru a pozvání bota</a>
+                  <li class="toctree-l1"><a class="" href="h.md">Vytvoření serveru</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">Pozvání bota na server</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="h.md">h</a>
+                  <li class="toctree-l1"><a class="" href="h.md">Seznam dostupných příkazů</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">/explain – Výklad teorie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">/generate – Generace příkladů</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">/render – Vykreslování matematiky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">/setup – Možnosti moderace</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Provoz vlastní instance</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="h.md">h</a>
+                  <li class="toctree-l1"><a class="" href="h.md">Vytvoření aplikace na Discord Developer Portal</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">První spuštění</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">Synchronizace příkazů</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">Seznam příkazů pro majitele</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="h.md">Popis projektu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">Pravidla pro zápis MD souborů</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">Vlastní téma pro výklad teorie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="h.md">Vlastní kategorie příkladů</a>
                   </li>
               </ul>
       </div>
@@ -86,7 +114,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Úvod</li>
+          <li class="breadcrumb-item">Úvod</li>
+      <li class="breadcrumb-item active">Obsah manuálu</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -97,16 +126,12 @@
               
                 <h1 id="vitejte-na-dokumentaci-se-pracuje-work-in-progress">Vítejte <br>⚠ NA DOKUMENTACI SE PRACUJE<br>⚠ WORK IN PROGRESS</h1>
 <p>Nacházíte se na stránkách manuálu pro Discord bota LingeBot.</p>
-<h2 id="rychle-odkazy">Rychlé odkazy</h2>
-<h3 id="zvaci-odkaz-bota">Zvací odkaz bota</h3>
-<p><a href="https://discord.com/oauth2/authorize?client_id=1160906076179415070&amp;permissions=2416045056&amp;scope=bot+applications.commands">https://discord.com/oauth2/authorize<br>?client_id=1160906076179415070<br>&amp;permissions=2416045056<br>&amp;scope=bot+applications.commands</a></p>
-<h3 id="github-repozitar">GitHub repozitář</h3>
-<p><a href="https://github.com/RadekMocek/BP">https://github.com/RadekMocek/BP</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="01JakZacit/0predstaveni/" class="btn btn-neutral float-right" title="Představení platformy Discord">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="quicklinks/" class="btn btn-neutral float-left" title="Rychlé odkazy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="concepts/" class="btn btn-neutral float-right" title="Důležité pojmy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -129,8 +154,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="quicklinks/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-      <span><a href="01JakZacit/0predstaveni/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+      <span><a href="concepts/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -147,8 +174,3 @@
 
 </body>
 </html>
-
-<!--
-MkDocs version : 1.5.3
-Build Date UTC : 2024-04-08 22:30:14.300343+00:00
--->
