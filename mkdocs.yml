@@ -6,6 +6,7 @@ theme:
 
 markdown_extensions:
   - mdx_truly_sane_lists
+
 nav:
   - Rychlé odkazy: quicklinks.md
   - Úvod:

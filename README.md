@@ -1,11 +1,6 @@
 # PDO
 
-* `mkdocs serve`
-* `mkdocs gh-deploy`
-
----
-
-* Dokumentovaným softwarem je Discord bot pro výklad a příklady z matematiky
+* Dokumentovaným softwarem je [Discord bot pro výklad a příklady z matematiky](https://github.com/RadekMocek/BP)
 * Hlavní instance bota je veřejně dostupná a koncoví uživatelé ji mohou používat
 * Bot je ale navržen i na self-host vlastní instance, do které je možné přidávat vlastní obsah
 
@@ -13,84 +8,24 @@
 
 1. Koncový uživatel hlavní instance bota (nejčastěji student VŠ)
 2. Uživatel provozující vlastní instanci s vlastním obsahem (např. učitel matematiky)
-3. (Dokumentace může posloužit i oponentovi BP pro lepší pochopení a případné otestování)
 
 * Obě skupiny mají základní technickou znalost, nemusí ale znát platformu Discord
+* (Dokumentace může posloužit i oponentovi BP pro lepší pochopení a případné otestování)
 
-## Struktura
+## Zvolený formát
 
-```md
-# LingeBot – Discord bot pro výklad a příklady z lineární algebry
+* __Dokumentace na webu__ – Pokud chce uživatel bota použít, znamená to, že právě používá PC/mobil/tablet a je připojen k internetu. Web se tedy jeví jako ideální formát
+* __mkdocs__ – Webová stránka je optimalizovaná jak na PC, tak na mobilní zařízení
+* __Šablona readthedocs__ – Tato šablona se často používá pro dokumentaci Python knihoven. U pokročilejších uživatelů, kteří si budou chtít bota rozšířit, se očekává znalost jazyka Python. Je tedy možné, že se s touto šablonou již setkali.
+* Šest hlavních částí v levé liště:
+  1. __Rychlé odkazy__ – Uživatel chce co nejrychleji pozvat bota na server nebo se dostat ke source/issues na GitHubu. Nachází se zde odkazy a nic víc.
+  2. __Úvod__ – Obsahuje představení SW, shrnutí obsahu následujících "kapitol" a důležité pojmy, které se dále budou používat
+  3. __Jak začít__ – pro uživatele Discordem nepolíbené
+  4. __Dostupné funkce a jak je používat__ – převážně pro koncové uživatele hlavní instance bota
+  5. __Provoz vlastní instance__ – pouze zprovoznění vlastní instance (ne každý musí chtít do bota přidávat vlastní obsah; tohle bude potřeba pro všechny, až mi skončí hosting :))
+  6. __Přidání vlastního obsahu__ – přidání vlastních teoretických témat a generátorů příkladů do vlastní instance
 
-## Stručně: Discord a boti
+## mkdocs tahák
 
-### Představení platformy Discord
-
-* Koncepty: Discord, server, role, bot (bot user, bot vs aplikace, problematika hostování, token, podpůrné příkazy ...)
-
-### Založení účtu a serveru, přidání bota na server
-
-* Tutorial (již zde zmínit příkaz `/dm`)
-
-## Funkce a ovládání LingeBota
-
-### Seznam příkazů
-
-* Rychlá reference
-
-### Výklad teorie – příkaz `/explain`
-
-* Popis rozhraní
-
-### Generace příkladů – příkaz `/generate`
-
-* Popis rozhraní
-
-### Vykreslování vlastních matematických výrazů – příkaz `/render`
-
-* Popis rozhraní
-
-#### Dispozice a pravidla pro zápis vykreslovaných matematických výrazů
-
-#### Jak přenastavit barevné schéma vykreslovaných matematických výrazů
-
-### Možnosti moderace – nastavení oprávnění sadou příkazů `/setup`
-
-#### Role v rámci LingeBot – admin, LingeMod a běžný uživatel
-
-#### Nastavení jednotlivých oprávnění
-
-* Popis, co je možné; pak ukázka na příkladu
-
-## Vlastní instance LingeBota
-
-* Stručný popis projektu (a databáze)
-
-### Zprovoznění vlastní instance LingeBota
-
-#### Vytvoření aplikace na Discord Developer Portal
-
-* Tutorial
-
-#### Příprava prostředí, konfigurace a první spuštění
-
-* Tutorial
-
-#### Problematika podpůrných příkazů
-
-#### Příkazy pro majitele instance LingeBota
-
-#### Možnosti nasazení
-
-### Přidání vlastního obsahu do LingeBota
-
-#### MD soubory a pravidla pro jejich zápis
-
-#### Vlastní výklad teorie
-
-* Ukázka na příkladu
-
-#### Vlastní generátor příkladů
-
-* Ukázka na příkladu
-```
+* `mkdocs serve`
+* `mkdocs gh-deploy`
