@@ -1,1 +1,0 @@
-# Představení platformy Discord

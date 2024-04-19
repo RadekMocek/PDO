@@ -3,9 +3,14 @@ site_url: https://RadekMocek.github.io/PDO/
 theme:
   name: readthedocs
   prev_next_buttons_location: bottom
+  sticky_navigation: false
 
 markdown_extensions:
   - mdx_truly_sane_lists
+  - admonition
+
+extra_css: 
+  - css.css
 
 nav:
   - Rychlé odkazy: quicklinks.md
@@ -13,24 +18,23 @@ nav:
     - Obsah manuálu: index.md
     - Důležité pojmy: concepts.md
   - Jak začít:
-    - Představení platformy Discord: 01JakZacit/0predstaveni.md
-    - Založení účtu: h.md
-    - Vytvoření serveru: h.md
-    - Pozvání bota na server: h.md
+    - Založení uživatelského účtu: 01JakZacit/0zalozeniuctu.md
+    - Vytvoření serveru a uživatelské rozhraní: 01JakZacit/1zalozeniserveru.md
+    - Přidání bota na server, zadávání příkazů: 01JakZacit/2pozvanibota.md
   - Dostupné funkce a jak je používat:
-    - Seznam dostupných příkazů: h.md
-    - /explain – Výklad teorie  : h.md
-    - /generate – Generace příkladů: h.md
-    - /render – Vykreslování matematiky: h.md
-    - /setup – Možnosti moderace: h.md
+    - Seznam dostupných příkazů: 02HlavniInstance/dostupneprikazy.md
+    - /explain – Výklad teorie  : 02HlavniInstance/h.md
+    - /generate – Generace příkladů: 02HlavniInstance/h.md
+    - /render – Vykreslování matematiky: 02HlavniInstance/h.md
+    - /setup – Možnosti moderace: 02HlavniInstance/h.md
   - Provoz vlastní instance:
-    - Vytvoření aplikace na Discord Developer Portal: h.md
-    - První spuštění: h.md
-    - Synchronizace příkazů: h.md
-    - Seznam příkazů pro majitele: h.md
+    - Vytvoření aplikace na Discord Developer Portal: 03ProvozVlastniInstance/h.md
+    - První spuštění: 03ProvozVlastniInstance/h.md
+    - Synchronizace příkazů: 03ProvozVlastniInstance/h.md
+    - Seznam příkazů pro majitele: 03ProvozVlastniInstance/h.md
     - Spuštění v prostředí Docker: 03ProvozVlastniInstance/4docker.md
   - Přidání vlastního obsahu:
-    - Popis projektu: h.md
-    - Pravidla pro zápis MD souborů: h.md
-    - Vlastní téma pro výklad teorie: h.md
-    - Vlastní kategorie příkladů: h.md
+    - Popis projektu: 04VlastniObsah/h.md
+    - Pravidla pro zápis MD souborů: 04VlastniObsah/h.md
+    - Vlastní téma pro výklad teorie: 04VlastniObsah/h.md
+    - Vlastní kategorie příkladů: 04VlastniObsah/h.md
