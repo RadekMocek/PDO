@@ -22,16 +22,16 @@ nav:
     - Vytvoření serveru a uživatelské rozhraní: 01JakZacit/1zalozeniserveru.md
     - Přidání bota na server, zadávání příkazů: 01JakZacit/2pozvanibota.md
   - Dostupné funkce a jak je používat:
-    - Seznam dostupných příkazů: 02HlavniInstance/dostupneprikazy.md
-    - /explain – Výklad teorie  : 02HlavniInstance/h.md
-    - /generate – Generace příkladů: 02HlavniInstance/h.md
-    - /render – Vykreslování matematiky: 02HlavniInstance/h.md
-    - /setup – Možnosti moderace: 02HlavniInstance/h.md
+    - Seznam dostupných příkazů: 02HlavniInstance/0dostupneprikazy.md
+    - /explain – Výklad teorie  : 02HlavniInstance/1explain.md
+    - /generate – Generace příkladů: 02HlavniInstance/2generate.md
+    - /render – Vykreslování matematiky: 02HlavniInstance/3render.md
+    - /setup – Nastavení bota: 02HlavniInstance/4setup.md
   - Provoz vlastní instance:
-    - Vytvoření aplikace na Discord Developer Portal: 03ProvozVlastniInstance/h.md
+    - Vytvoření aplikace na<br>Discord Developer Portal: 03ProvozVlastniInstance/h.md
     - První spuštění: 03ProvozVlastniInstance/h.md
     - Synchronizace příkazů: 03ProvozVlastniInstance/h.md
-    - Seznam příkazů pro majitele: 03ProvozVlastniInstance/h.md
+    - Seznam příkazů pro provozovatele: 03ProvozVlastniInstance/h.md
     - Spuštění v prostředí Docker: 03ProvozVlastniInstance/4docker.md
   - Přidání vlastního obsahu:
     - Popis projektu: 04VlastniObsah/h.md

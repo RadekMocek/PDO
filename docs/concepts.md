@@ -34,7 +34,7 @@ __Administrátor__ je člen serveru se stejnojmenným oprávněním, které obch
 
 ## Discord bot
 
-<blockquote>bot,&emsp;interaktivní prvky,&emsp;podpůrné příkazy,&emsp;starý typ příkazů,&emsp;zvací odkaz,&emsp;token</blockquote>
+<blockquote>bot,&emsp;interaktivní prvky,&emsp;podpůrné příkazy,&emsp;argument příkazu,&emsp;starý typ příkazů,&emsp;zvací&nbsp;odkaz,&emsp;token</blockquote>
 
 Bot je speciální typ uživatele, jehož chování je určeno programem.
 
@@ -42,9 +42,11 @@ Bot může na Discordu provádět mnoho akcí stejně jako běžný „lidský�
 
 __Příkaz__ je textová zpráva se speciálním formátem, na kterou bot po jejím odeslání reaguje vykonáním určité akce. V&nbsp;roce 2021 Discord představil tzv. __podpůrné příkazy__, které unifikují ovládání botů. Všechny podpůrné příkazy začínají lomítkem a je k&nbsp;dispozici jejich našeptávání. Např.:
 
-* `/help` – Bot odešle do textového kanálu („do chatu“) zprávu, která obsahuje seznam jeho dostupných příkazů.
-* `/hod_kostkou` – Bot odešle do chatu zprávu, která obsahuje číslo od jedné do šesti.
-* `/secti 2 2` – Bot odešle chatu zprávu s&nbsp;číslem 4. Jedná se o&nbsp;příkaz s&nbsp;dvěma parametry.
+* `/help` – Bot odešle do textového kanálu zprávu, která obsahuje seznam jeho dostupných příkazů.
+* `/hod_kostkou` – Bot odešle do textového kanálu zprávu, která obsahuje číslo od jedné do šesti.
+* `/secti 2 2` – Bot odešle do textového kanálu zprávu s&nbsp;číslem 4. Jedná se o&nbsp;příkaz s&nbsp;dvěma argumenty.
+
+__Argument příkazu__ je //TODO
 
 Kromě podpůrných příkazů může bot reagovat i na interaktivní prvky nebo běžné textové zprávy. Před představením podpůrných příkazů měl obvykle bot svůj prefix – např. vykřičník – a pak příkazem pro nápovědu bylo `!help` namísto `/help`. Tento __„starý typ příkazů“__ lze používat i dnes např. pro příkazy správy u&nbsp;kterých nechceme, aby byly součástí našeptávání.
 
@@ -61,7 +63,7 @@ Vlastního bota lze vytvořit na webu _Discord Developer Portal_, kde je mu v&nb
 
 ## LingeBot a LingeMod
 
-__LingeBot__ je Discord bot zaměřený na výklad teorie a generování příkladů z&nbsp;lineární algebry. Zároveň do prostředí chatu přináší možnost vykreslování matematických výrazů.
+__LingeBot__ je Discord bot zaměřený na výklad teorie a generování příkladů z&nbsp;lineární algebry. Zároveň do prostředí do textového kanálu přináší možnost vykreslování matematických výrazů.
 
 Neplést si s&nbsp;__LingeMod__. To je role, kterou LingeBot vytvoří na každém serveru, jakmile se na něj připojí. Pomocí této role lze určit, jací uživatelé mají přístup k&nbsp;jakým příkazům.
 
