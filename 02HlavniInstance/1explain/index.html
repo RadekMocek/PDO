@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/4docker/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/02HlavniInstance/1explain/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Spuštění v prostředí Docker - LingeBot manuál</title>
+    <title>/explain – Výklad teorie - LingeBot manuál</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Spu\u0161t\u011bn\u00ed v prost\u0159ed\u00ed Docker";
-        var mkdocs_page_input_path = "03ProvozVlastniInstance\\4docker.md";
-        var mkdocs_page_url = "/PDO/03ProvozVlastniInstance/4docker/";
+        var mkdocs_page_name = "/explain \u2013 V\u00fdklad teorie";
+        var mkdocs_page_input_path = "02HlavniInstance\\1explain.md";
+        var mkdocs_page_url = "/PDO/02HlavniInstance/1explain/";
       </script>
     
     <!--[if lt IE 9]>
@@ -61,31 +61,35 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/0dostupneprikazy/">Seznam dostupných příkazů</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../0dostupneprikazy/">Seznam dostupných příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/1explain/">/explain – Výklad teorie</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">/explain – Výklad teorie</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#princip-prikazu-explain">Princip příkazu /explain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rozhrani-prikazu-explain">Rozhraní příkazu /explain</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/2generate/">/generate – Generace příkladů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2generate/">/generate – Generace příkladů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/3render/">/render – Vykreslování matematiky</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../3render/">/render – Vykreslování matematiky</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/4setup/">/setup – Nastavení bota</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../4setup/">/setup – Nastavení bota</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Provoz vlastní instance</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="" href="../h.md">Vytvoření aplikace na<br>Discord Developer Portal</a>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Vytvoření aplikace na<br>Discord Developer Portal</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">První spuštění</a>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">První spuštění</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Synchronizace příkazů</a>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Seznam příkazů pro provozovatele</a>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Spuštění v prostředí Docker</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -113,8 +117,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Provoz vlastní instance</li>
-      <li class="breadcrumb-item active">Spuštění v prostředí Docker</li>
+          <li class="breadcrumb-item">Dostupné funkce a jak je používat</li>
+      <li class="breadcrumb-item active">/explain – Výklad teorie</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -123,53 +127,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="spusteni-lingebota-na-platforme-docker">Spuštění LingeBota na platformě Docker</h1>
-<p><strong>1.</strong> Naklonujte si repozitář <code>RadekMocek/BP</code> a přesuňte se do složky <code>BP/Bot/</code></p>
-<pre><code class="language-shell">mkdir LingeBot
-cd LingeBot/
-git clone https://github.com/RadekMocek/BP
-cd BP/Bot/
-</code></pre>
-<p><strong>2.</strong> Vytvořte a vyplňte soubor <code>config.json</code> (lze využít <code>config-example.json</code>)</p>
-<pre><code class="language-shell">cp config-example.json config.json
-vim config.json
-</code></pre>
-<pre><code class="language-json">{
-  &quot;tokenProduction&quot;: &quot;token_for_main_bot_account&quot;,
-  &quot;tokenTesting&quot;: &quot;token_for_secondary_bot_account&quot;,
-  &quot;isProduction&quot;: true,
-  &quot;secret1&quot;: &quot;link_to_google_forms&quot;
-}
-</code></pre>
-<details>
-  <summary>Poznámka ke kofiguraci `config.json`</summary>
-
-  Konfigurace obsahuje dva tokeny pro snadnější přepínání mezi produkčním a testovacím botem.<br>
-  Produkční bot je ten, který běží 24/7 a je používán koncovými uživateli. Jeho token je hodnotou `tokenProduction`.<br>
-  Testovací bot je ten, který se používá příležitostně pro testování nových funkcí vývojářem. Jeho token je hodnotou `tokenTesting`.<br>
-
-  Hodnota `isProduction` přepíná mezi produkčním a testovacím botem: `true` pro produkční a `false` pro testovací.<br>
-  Pokud není potřeba testovacího bota, je možné ponechat `isProduction` nastaveno na `true` a vyplnit token pouze pro `tokenProduction`. Dokud není nastaveno `isProduction` na `false`, na hodnotě `tokenTesting` nezáleží.<br>
-
-  `secret1` momentálně slouží pro uchování odkazu na dotazník, v pozdějších verzích bude pravděpodobně odstraněn.
-
-</details>
-
-<p><strong>3.</strong> Sestavte Docker image</p>
-<pre><code class="language-shell">docker build --tag lingebot .
-</code></pre>
-<p><strong>4.</strong> Spusťte Docker container</p>
-<p>Pro první spuštění použijte:</p>
-<pre><code class="language-shell">docker run --name lingecontainer -d lingebot
-</code></pre>
-<p>Pro následující spuštění použijte:</p>
-<pre><code class="language-shell">docker start lingecontainer
-</code></pre>
+                <h1 id="vyklad-teorie-pomoci-prikazu-explain">Výklad teorie pomocí příkazu <code>/explain</code></h1>
+<h2 id="princip-prikazu-explain">Princip příkazu <code>/explain</code></h2>
+<p>Po zadání příkazu <code>/explain</code> se v textovém kanálu objeví rozhraní pro výklad teorie. Výklad funguje tak, že bot do textového kanálu odesílá zprávy, které obsahují výpisky z konkrétního matematického tématu. Tyto výpisky jsou vytvořeny provozovatelem bota.</p>
+<p>Teoretické materiály se dělí na témata, která se pak dělí na podtémata. Po zadání píkazu <code>/explain</code> se nejprve objeví výběrový seznam, kde si uživatel zvolí jedno téma, které ho zajímá. V textovém kanálu se pak vždy nachází zprávy patřící k jednomu podtématu vybraného tématu. Mezi podtématy lze přepínat pomocí tlačítek nebo nově objeveného výběrového seznamu.</p>
+<div class="admonition caution">
+<p class="admonition-title">Upozornění</p>
+<p>Při přepínání mezi podtématy jsou nejprve do kanálu odeslány zprávy nového podtématu a následně jsou smazány zprávy starého podtématu. Při tomto procesu (který může chvilku trvat) nebudou ovládací prvky reagovat. Pokud je zpráv více, může se proces na chvíli zastavit, jedná se o rate limit ze strany Discordu.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Používání výkladu teorie v textovém kanálu, kde komunikují nebo používají bota i jiní uživatelé, může být nepřehledné až chaotické. Zprávy odeslané botem se mohou zamíchat s cizími zprávami a teoretické výpisky pak nebudou dobře čitelné.</p>
+<p>Proto je výklad teorie vhodné používat v kanálech s omezeným přístupem nebo v DMs. Pro zahájení konverzace v DMs slouží příkaz <code>/dm</code>.</p>
+</div>
+<h2 id="rozhrani-prikazu-explain">Rozhraní příkazu <code>/explain</code></h2>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../02HlavniInstance/4setup/" class="btn btn-neutral float-left" title="/setup – Nastavení bota"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../0dostupneprikazy/" class="btn btn-neutral float-left" title="Seznam dostupných příkazů"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2generate/" class="btn btn-neutral float-right" title="/generate – Generace příkladů">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -192,8 +169,10 @@ vim config.json
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../02HlavniInstance/4setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../0dostupneprikazy/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../2generate/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/4docker/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/01JakZacit/0zalozeniuctu/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Spuštění v prostředí Docker - LingeBot manuál</title>
+    <title>Založení uživatelského účtu - LingeBot manuál</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Spu\u0161t\u011bn\u00ed v prost\u0159ed\u00ed Docker";
-        var mkdocs_page_input_path = "03ProvozVlastniInstance\\4docker.md";
-        var mkdocs_page_url = "/PDO/03ProvozVlastniInstance/4docker/";
+        var mkdocs_page_name = "Zalo\u017een\u00ed u\u017eivatelsk\u00e9ho \u00fa\u010dtu";
+        var mkdocs_page_input_path = "01JakZacit\\0zalozeniuctu.md";
+        var mkdocs_page_url = "/PDO/01JakZacit/0zalozeniuctu/";
       </script>
     
     <!--[if lt IE 9]>
@@ -52,12 +52,14 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Jak začít</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/0zalozeniuctu/">Založení uživatelského účtu</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Založení uživatelského účtu</a>
+    <ul class="current">
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server, zadávání příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2pozvanibota/">Přidání bota na server, zadávání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
@@ -74,18 +76,16 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Provoz vlastní instance</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="" href="../h.md">Vytvoření aplikace na<br>Discord Developer Portal</a>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Vytvoření aplikace na<br>Discord Developer Portal</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">První spuštění</a>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">První spuštění</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Synchronizace příkazů</a>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Seznam příkazů pro provozovatele</a>
+                  <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Spuštění v prostředí Docker</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -113,8 +113,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Provoz vlastní instance</li>
-      <li class="breadcrumb-item active">Spuštění v prostředí Docker</li>
+          <li class="breadcrumb-item">Jak začít</li>
+      <li class="breadcrumb-item active">Založení uživatelského účtu</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -123,53 +123,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="spusteni-lingebota-na-platforme-docker">Spuštění LingeBota na platformě Docker</h1>
-<p><strong>1.</strong> Naklonujte si repozitář <code>RadekMocek/BP</code> a přesuňte se do složky <code>BP/Bot/</code></p>
-<pre><code class="language-shell">mkdir LingeBot
-cd LingeBot/
-git clone https://github.com/RadekMocek/BP
-cd BP/Bot/
-</code></pre>
-<p><strong>2.</strong> Vytvořte a vyplňte soubor <code>config.json</code> (lze využít <code>config-example.json</code>)</p>
-<pre><code class="language-shell">cp config-example.json config.json
-vim config.json
-</code></pre>
-<pre><code class="language-json">{
-  &quot;tokenProduction&quot;: &quot;token_for_main_bot_account&quot;,
-  &quot;tokenTesting&quot;: &quot;token_for_secondary_bot_account&quot;,
-  &quot;isProduction&quot;: true,
-  &quot;secret1&quot;: &quot;link_to_google_forms&quot;
-}
-</code></pre>
-<details>
-  <summary>Poznámka ke kofiguraci `config.json`</summary>
-
-  Konfigurace obsahuje dva tokeny pro snadnější přepínání mezi produkčním a testovacím botem.<br>
-  Produkční bot je ten, který běží 24/7 a je používán koncovými uživateli. Jeho token je hodnotou `tokenProduction`.<br>
-  Testovací bot je ten, který se používá příležitostně pro testování nových funkcí vývojářem. Jeho token je hodnotou `tokenTesting`.<br>
-
-  Hodnota `isProduction` přepíná mezi produkčním a testovacím botem: `true` pro produkční a `false` pro testovací.<br>
-  Pokud není potřeba testovacího bota, je možné ponechat `isProduction` nastaveno na `true` a vyplnit token pouze pro `tokenProduction`. Dokud není nastaveno `isProduction` na `false`, na hodnotě `tokenTesting` nezáleží.<br>
-
-  `secret1` momentálně slouží pro uchování odkazu na dotazník, v pozdějších verzích bude pravděpodobně odstraněn.
-
-</details>
-
-<p><strong>3.</strong> Sestavte Docker image</p>
-<pre><code class="language-shell">docker build --tag lingebot .
-</code></pre>
-<p><strong>4.</strong> Spusťte Docker container</p>
-<p>Pro první spuštění použijte:</p>
-<pre><code class="language-shell">docker run --name lingecontainer -d lingebot
-</code></pre>
-<p>Pro následující spuštění použijte:</p>
-<pre><code class="language-shell">docker start lingecontainer
-</code></pre>
+                <h1 id="zalozeni-uzivatelskeho-uctu-na-platforme-discord">Založení uživatelského účtu na platformě Discord</h1>
+<p>Tato sekce popisuje, jak si založit uživatelský účet na platformě Discord. Tento postup je proveden ve webové aplikaci.</p>
+<p><strong>1.</strong> Přejděte na <a href="https://discord.com/app" target="_blank">https://discord.com/app</a> a klikněte na <em>Registruj se</em>.</p>
+<p><img alt="h" src="../../img/010101.png" /></p>
+<p><strong>2.</strong> Vyplňte požadované údaje a klikněte na <em>Pokračovat</em>.</p>
+<p><img alt="h" src="../../img/010102.png" /></p>
+<p><strong>3.</strong> Abyste mohli váš účet plnohodnotně používat, musíte ověřit svou e-mailovou adresu. Klikněte na <em>Verify Email</em> v&nbsp;mailu, který přišel na vaši e-mailovou adresu.</p>
+<p><img alt="h" src="../../img/010102b.png" /></p>
+<p><strong>4.</strong> Váš Discord účet je založen. Zavřete panel oznamující úspěšné potvrzení e-mailu a vraťte se do panelu, kde se prováděla registrace. Zde zavřete uvítací okno a případně odklikejte nápovědu v&nbsp;podobě žlutých vykřičníků.</p>
+<p><img alt="h" src="../../img/010103.png" /></p>
+<p><strong>5.</strong> Nyní jste připraveni na používání platformy Discord.</p>
+<p><img alt="h" src="../../img/010104.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../02HlavniInstance/4setup/" class="btn btn-neutral float-left" title="/setup – Nastavení bota"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../concepts/" class="btn btn-neutral float-left" title="Důležité pojmy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1zalozeniserveru/" class="btn btn-neutral float-right" title="Vytvoření serveru a uživatelské rozhraní">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -192,8 +163,10 @@ vim config.json
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../02HlavniInstance/4setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../concepts/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../1zalozeniserveru/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

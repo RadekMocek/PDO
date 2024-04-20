@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -55,7 +56,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#discord-bot">Discord bot</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#lingebot">LingeBot</a>
+    <li class="toctree-l2"><a class="reference internal" href="#lingebot-a-lingemod">LingeBot a LingeMod</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#hlavni-a-vlastni-instance-lingebota">Hlavní a vlastní instance LingeBota</a>
     </li>
@@ -64,50 +65,48 @@
               </ul>
               <p class="caption"><span class="caption-text">Jak začít</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../01JakZacit/0predstaveni/">Představení platformy Discord</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../01JakZacit/0zalozeniuctu/">Založení uživatelského účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Založení účtu</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../01JakZacit/1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Vytvoření serveru</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Pozvání bota na server</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../01JakZacit/2pozvanibota/">Přidání bota na server, zadávání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../h.md">Seznam dostupných příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../02HlavniInstance/0dostupneprikazy/">Seznam dostupných příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">/explain – Výklad teorie</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../02HlavniInstance/1explain/">/explain – Výklad teorie</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">/generate – Generace příkladů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../02HlavniInstance/2generate/">/generate – Generace příkladů</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">/render – Vykreslování matematiky</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../02HlavniInstance/3render/">/render – Vykreslování matematiky</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">/setup – Možnosti moderace</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../02HlavniInstance/4setup/">/setup – Nastavení bota</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Provoz vlastní instance</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../h.md">Vytvoření aplikace na Discord Developer Portal</a>
+                  <li class="toctree-l1"><a class="" href="../03ProvozVlastniInstance/h.md">Vytvoření aplikace na<br>Discord Developer Portal</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">První spuštění</a>
+                  <li class="toctree-l1"><a class="" href="../03ProvozVlastniInstance/h.md">První spuštění</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Synchronizace příkazů</a>
+                  <li class="toctree-l1"><a class="" href="../03ProvozVlastniInstance/h.md">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Seznam příkazů pro majitele</a>
+                  <li class="toctree-l1"><a class="" href="../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../h.md">Popis projektu</a>
+                  <li class="toctree-l1"><a class="" href="../04VlastniObsah/h.md">Popis projektu</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Pravidla pro zápis MD souborů</a>
+                  <li class="toctree-l1"><a class="" href="../04VlastniObsah/h.md">Pravidla pro zápis MD souborů</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Vlastní téma pro výklad teorie</a>
+                  <li class="toctree-l1"><a class="" href="../04VlastniObsah/h.md">Vlastní téma pro výklad teorie</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../h.md">Vlastní kategorie příkladů</a>
+                  <li class="toctree-l1"><a class="" href="../04VlastniObsah/h.md">Vlastní kategorie příkladů</a>
                   </li>
               </ul>
       </div>
@@ -137,26 +136,55 @@
                 <h1 id="dulezite-pojmy">Důležité pojmy</h1>
 <p>Tato sekce představuje specifické pojmy, které jsou používány v&nbsp;dalších částech manuálu a se kterými by měl být uživatel obeznámen.</p>
 <h2 id="discord">Discord</h2>
-<p>Discord je program, ve kterém si uživatelé mohou zasílat textové zprávy a telefonovat po internetu.</p>
-<p>Po založení účtu si můžete přidat ostatní uživatele do přátel. Pro odeslání žádosti o&nbsp;přátelství potřebujete znát uživatelské jméno daného uživatele. Pokud je vaše žádost přijata, můžete s&nbsp;druhou stranou komunikovat pomocí textových DMs nebo hlasového hovoru. DMs je zkratka pro <em>Direct Messages</em>, tedy přímé zprávy.</p>
-<p>Discord umožňuje vytvořit skupinovou konverzaci až deseti uživatelů, jejíž funkce jsou stejné jako u&nbsp;DMs. Samostatným celkem, který také umožňuje komunikaci, jsou pak Discord servery.</p>
-<p>Discord je dostupný buď ve webové aplikaci na <a href="https://discord.com/app">https://discord.com/app</a>, nebo jako program pro operační systémy Windows, Linux, MacOS, Android a iOS. Podrobnější informace o&nbsp;podporovaných platformách se nacházejí v <a href="https://support.discord.com/hc/en-us/articles/213491697-What-are-the-OS-system-requirements-for-Discord">na webu Discordu v sekci FAQ</a>.</p>
+<blockquote>Discord,&emsp;DMs,&emsp;skupinová konverzace</blockquote>
+
+<p><strong>Discord</strong> je program, ve kterém si uživatelé mohou zasílat textové zprávy a telefonovat po internetu.</p>
+<p>Po založení účtu si můžete přidat ostatní uživatele do přátel. Pro odeslání žádosti o&nbsp;přátelství potřebujete znát uživatelské jméno daného uživatele. Pokud je vaše žádost přijata, můžete s&nbsp;druhou stranou komunikovat pomocí textových DMs nebo hlasového hovoru. <strong>DMs</strong> je zkratka pro <em>Direct Messages</em>, tedy přímé zprávy.</p>
+<p>Discord umožňuje vytvořit <strong>skupinovou konverzaci</strong> až deseti uživatelů, jejíž funkce jsou stejné jako u&nbsp;DMs. Samostatným celkem, který také umožňuje komunikaci, jsou pak Discord servery.</p>
+<p>Discord je dostupný buď ve webové aplikaci na <a href="https://discord.com/app" target="_blank">https://discord.com/app</a>, nebo jako program pro operační systémy Windows, Linux, MacOS, Android a iOS. Podrobnější informace o&nbsp;podporovaných platformách se nacházejí <a href="https://support.discord.com/hc/en-us/articles/213491697-What-are-the-OS-system-requirements-for-Discord" target="_blank">na webu Discordu v&nbsp;sekci FAQ</a>.</p>
 <h2 id="discord-server">Discord server</h2>
-<p>Uživatel se může přidat celkem na 100 různých serverů.</p>
+<blockquote>server,&emsp;člen,&emsp;kanál,&emsp;role,&emsp;oprávnění,&emsp;administrátor</blockquote>
+
+<p>Pojem <strong>server</strong> je na platformě Discord chápán jako místo, kde se nachází členové a kanály.</p>
+<p><strong>Člen</strong> serveru je uživatel, který se na daný server připojil. Pro připojení musí být uživatel na server pozván již existujícím členem. Druhou možností je použití zvacího odkazu, který může být pro server vygenerován. Po kliknutí na tento odkaz se uživatel stane členem daného serveru. Uživatel se může přidat celkem na 100 různých serverů. Jeden server může mít v&nbsp;základu až 500 000 členů.</p>
+<p><strong>Kanál</strong> je obvykle buď textový, nebo hlasový. Funkčně odpovídá skupinové konverzaci, zde se ale může komunikace zúčastnit jakýkoliv člen serveru, který k&nbsp;tomu má patřičná oprávnění.</p>
+<p>Ne všichni členové serveru jsou si rovni. Nejvýše postavený člen je zakladatel daného serveru. Ten může vytvářet tzv. role, které přidělí ostatním členům.</p>
+<p><strong>Role</strong> je sada oprávnění, která může být přidělena členům serveru.</p>
+<p><strong>Oprávnění</strong> je pravidlo, které určuje, zdali může člen serveru provést určitou akci. Akcí může být odesílání zpráv do kanálu nebo pozvání nového člena, ale existují i akce pro správu serveru. Jednou z&nbsp;nich je i <em>správa rolí</em>. Pokud zakladatel serveru přidá členovi roli s&nbsp;oprávněním pro tuto akci, tento člen pak bude moci také přidělovat role a oprávnění.</p>
+<p><strong>Administrátor</strong> je člen serveru se stejnojmenným oprávněním, které obchází veškerá ostatní oprávnění a umožňuje mu dělat téměř vše. Zakladatel serveru by měl jmenovat administrátorem jen ty, kterým opravdu věří.</p>
 <h2 id="discord-bot">Discord bot</h2>
+<blockquote>bot,&emsp;interaktivní prvky,&emsp;podpůrné příkazy,&emsp;argument příkazu,&emsp;starý typ příkazů,&emsp;zvací&nbsp;odkaz,&emsp;token</blockquote>
+
+<p>Bot je speciální typ uživatele, jehož chování je určeno programem.</p>
+<p>Bot může na Discordu provádět mnoho akcí stejně jako běžný „lidský“ uživatel. Může např. číst a odesílat textové zprávy, připojit se do hlasového hovoru a spravovat nastavení serveru. K&nbsp;těmto akcím musí mít patřičná oprávnění. Oproti běžným uživatelů může bot navíc do svých zpráv přidávat <strong>interaktivní prvky</strong> jako tlačítka. Bot se obvykle nesnaží simulovat běžného uživatele (tzv. chatbot), spíše se jedná o&nbsp;nástroj, který reaguje na předem danou sadu příkazů vykonáním příslušných akcí.</p>
+<p><strong>Příkaz</strong> je textová zpráva se speciálním formátem, na kterou bot po jejím odeslání reaguje vykonáním určité akce. V&nbsp;roce 2021 Discord představil tzv. <strong>podpůrné příkazy</strong>, které unifikují ovládání botů. Všechny podpůrné příkazy začínají lomítkem a je k&nbsp;dispozici jejich našeptávání. Např.:</p>
 <ul>
-<li>příkazy</li>
+<li><code>/help</code> – Bot odešle do textového kanálu zprávu, která obsahuje seznam jeho dostupných příkazů.</li>
+<li><code>/hod_kostkou</code> – Bot odešle do textového kanálu zprávu, která obsahuje číslo od jedné do šesti.</li>
+<li><code>/secti 2 2</code> – Bot odešle do textového kanálu zprávu s&nbsp;číslem 4. Jedná se o&nbsp;příkaz s&nbsp;dvěma argumenty.</li>
 </ul>
-<h2 id="lingebot">LingeBot</h2>
-<p>*</p>
+<p><strong>Argument příkazu</strong> je //TODO</p>
+<p>Kromě podpůrných příkazů může bot reagovat i na interaktivní prvky nebo běžné textové zprávy. Před představením podpůrných příkazů měl obvykle bot svůj prefix – např. vykřičník – a pak příkazem pro nápovědu bylo <code>!help</code> namísto <code>/help</code>. Tento <strong>„starý typ příkazů“</strong> lze používat i dnes např. pro příkazy správy u&nbsp;kterých nechceme, aby byly součástí našeptávání.</p>
+<p>Bota lze na server přidat pomocí jeho speciálního <strong>zvacího odkazu</strong>. Jedná se o&nbsp;odkaz na webovou stránku s&nbsp;dialogem pro přidání bota. Součástí dialogu je vývěrový seznam všech serverů, kam má daný uživatel oprávnění bota přidat. Po zvolení serveru a potvrzení se bot na server připojí.</p>
+<p>Boti tedy obvykle operují na serverech, lze s&nbsp;nimi komunikovat ale i v&nbsp;DMs. Bota si nelze přidat do přátel, pro zahájení DMs je tedy nutné s&nbsp;ním mít společný server, odkud ho lze kontaktovat. Bota nelze pozvat do skupinové konverzace.</p>
+<p>Vlastního bota lze vytvořit na webu <em>Discord Developer Portal</em>, kde je mu v&nbsp;podstatě založen účet včetně nastavení uživatelského jména a profilového obrázku. Oproti běžnému uživateli, který se přihlašuje pomocí uživatelského jména a hesla, se bot přihlašuje pomocí ověřovacího <strong>tokenu</strong>. Token je uložen v&nbsp;programu, který bota ovládá. Tento program musí být někde neustále spuštěný. Tokeny vašich botů uchovejte v&nbsp;tajnosti. Při prozrazení tokenu může být účet vašeho bota tzv. odcizen: někdo předefinuje jeho chování svým vlastním programem.</p>
+<div class="admonition note">
+<p class="admonition-title">Upřesnění: Bot vs. Aplikace</p>
+<p>Jako Discord aplikace se označuje vše, co oficiálním způsobem komunikuje s&nbsp;Discord API. K&nbsp;aplikaci pak může být přiřazen bot, který je její uživatelskou reprezentací.</p>
+<p>Bota lze od běžného uživatele rozeznat podle toho, že má vedle svého jména napsáno <em>BOT</em>, při psaní tohoto manuálu (19. 4. 2024) byl ale tento nápis změněn na <em>APLIKACE</em>. Je tedy možné, že v&nbsp;oficiálním názvosloví dojde ke změnám. Tento manuál bude prozatím používat starý pojem <em>bot</em>.</p>
+</div>
+<h2 id="lingebot-a-lingemod">LingeBot a LingeMod</h2>
+<p><strong>LingeBot</strong> je Discord bot zaměřený na výklad teorie a generování příkladů z&nbsp;lineární algebry. Zároveň do prostředí do textového kanálu přináší možnost vykreslování matematických výrazů.</p>
+<p>Neplést si s&nbsp;<strong>LingeMod</strong>. To je role, kterou LingeBot vytvoří na každém serveru, jakmile se na něj připojí. Pomocí této role lze určit, jací uživatelé mají přístup k&nbsp;jakým příkazům.</p>
 <h2 id="hlavni-a-vlastni-instance-lingebota">Hlavní a vlastní instance LingeBota</h2>
-<p>*</p>
+<p>LingeBot má otevřený zdrojový kód. Ten je možné si stáhnout a spustit. Do programu je ale nutné vložit token. Pokud uživatel do tohoto programu vloží token svého vlastního bota, pak se jedná o&nbsp;<strong>vlastní instanci LingeBota</strong>.</p>
+<p><strong>Hlavní instance LingeBota</strong> je ta, kterou provozuje autor zdrojového kódu LingeBota.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href=".." class="btn btn-neutral float-left" title="Obsah manuálu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../01JakZacit/0predstaveni/" class="btn btn-neutral float-right" title="Představení platformy Discord">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../01JakZacit/0zalozeniuctu/" class="btn btn-neutral float-right" title="Založení uživatelského účtu">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -182,7 +210,7 @@
       <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../01JakZacit/0predstaveni/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../01JakZacit/0zalozeniuctu/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -191,10 +219,9 @@
     <script src="../js/theme_extra.js"></script>
     <script src="../js/theme.js"></script>
       <script src="../search/main.js"></script>
-      <script src="../js/open_in_new_tab.js"></script>
     <script>
         jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
+            SphinxRtdTheme.Navigation.enable(false);
         });
     </script>
 
