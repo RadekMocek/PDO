@@ -65,12 +65,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../0dostupneprikazy/">Seznam dostupných příkazů</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">/explain – Výklad teorie</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#princip-prikazu-explain">Princip příkazu /explain</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#rozhrani-prikazu-explain">Rozhraní příkazu /explain</a>
-    </li>
-    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../2generate/">/generate – Generace příkladů</a>
                   </li>
@@ -130,17 +124,63 @@
                 <h1 id="vyklad-teorie-pomoci-prikazu-explain">Výklad teorie pomocí příkazu <code>/explain</code></h1>
 <h2 id="princip-prikazu-explain">Princip příkazu <code>/explain</code></h2>
 <p>Po zadání příkazu <code>/explain</code> se v textovém kanálu objeví rozhraní pro výklad teorie. Výklad funguje tak, že bot do textového kanálu odesílá zprávy, které obsahují výpisky z konkrétního matematického tématu. Tyto výpisky jsou vytvořeny provozovatelem bota.</p>
-<p>Teoretické materiály se dělí na témata, která se pak dělí na podtémata. Po zadání píkazu <code>/explain</code> se nejprve objeví výběrový seznam, kde si uživatel zvolí jedno téma, které ho zajímá. V textovém kanálu se pak vždy nachází zprávy patřící k jednomu podtématu vybraného tématu. Mezi podtématy lze přepínat pomocí tlačítek nebo nově objeveného výběrového seznamu.</p>
+<p>Teoretické materiály se dělí na témata, která se pak dělí na podtémata. Po zadání příkazu <code>/explain</code> se nejprve objeví výběrový seznam, kde si uživatel zvolí jedno téma, které ho zajímá. V textovém kanálu se pak vždy nachází pouze zprávy, které patří k jednomu podtématu vybraného tématu. Mezi podtématy lze přepínat pomocí tlačítek nebo výběrového seznamu.</p>
 <div class="admonition caution">
-<p class="admonition-title">Upozornění</p>
-<p>Při přepínání mezi podtématy jsou nejprve do kanálu odeslány zprávy nového podtématu a následně jsou smazány zprávy starého podtématu. Při tomto procesu (který může chvilku trvat) nebudou ovládací prvky reagovat. Pokud je zpráv více, může se proces na chvíli zastavit, jedná se o rate limit ze strany Discordu.</p>
+<p class="admonition-title">Upozornění: Mechanismus odesílání/mazání zpráv a jeho rychlost</p>
+<p>Při přepínání mezi podtématy jsou nejprve do kanálu odeslány zprávy nového podtématu a následně jsou smazány zprávy starého podtématu. Při tomto procesu (který může chvilku trvat) nebudou ovládací prvky reagovat. Pokud je zpráv více, může se proces na chvíli zastavit. Jedná se o omezení ze strany Discordu.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Tip: Výklad teorie v přímých zprávách</p>
 <p>Používání výkladu teorie v textovém kanálu, kde komunikují nebo používají bota i jiní uživatelé, může být nepřehledné až chaotické. Zprávy odeslané botem se mohou zamíchat s cizími zprávami a teoretické výpisky pak nebudou dobře čitelné.</p>
 <p>Proto je výklad teorie vhodné používat v kanálech s omezeným přístupem nebo v DMs. Pro zahájení konverzace v DMs slouží příkaz <code>/dm</code>.</p>
 </div>
 <h2 id="rozhrani-prikazu-explain">Rozhraní příkazu <code>/explain</code></h2>
+<p>Výběr tématu z výběrového seznamu:
+<img alt="g" src="../../img/020201.gif" /></p>
+<p>Zobrazení vybraného tématu lze rozdělit na 4 části <em>A</em> až <em>D</em>:
+<img alt="h" src="../../img/020202.png" /></p>
+<blockquote>A – název tématu a informace relevantní pro celé téma<br>B – přehled dostupných podtémat a právě vybraného podtématu<br>C – obsah aktuálně vybraného podtématu<br>D – výběrový seznam podtémat a ovládací tlačítka<br></blockquote>
+
+<table>
+<thead>
+<tr>
+<th>Tlačítko</th>
+<th>Funkce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>⬅️Předchozí</strong></td>
+<td>Zobrazí předchozí podtéma.</td>
+</tr>
+<tr>
+<td><strong>➡️Další</strong></td>
+<td>Zobrazí následující podtéma.</td>
+</tr>
+<tr>
+<td><strong>⤴️Změnit téma</strong> *</td>
+<td>Vrátí se na prvotní výběr tématu.</td>
+</tr>
+<tr>
+<td><strong>📨Uložit do DMs</strong></td>
+<td>Přepošle aktuální podtéma do DMs.</td>
+</tr>
+<tr>
+<td><strong>✔️Ukončit</strong></td>
+<td>Ukončí rozhraní, ale zprávy v kanálu zůstanou.</td>
+</tr>
+<tr>
+<td><strong>🚫Ukončit a smazat</strong></td>
+<td>Ukončí rozhraní a smaže všechny příslušné zprávy.</td>
+</tr>
+</tbody>
+</table>
+<p>*&nbsp;V toto tlačítko se promění tlačítko <strong>➡️Další</strong>, pokud je aktuální podtéma to poslední.</p>
+<div class="admonition caution">
+<p class="admonition-title">Upozornění: Mizející tlačítka</p>
+<p>Pokud od posledního stisknutí tlačítka nebo použití výběrového seznamu uběhne 15 minut, rozhraní se automaticky ukončí a tlačítka i výběrový seznam zmizí.</p>
+<p>Ovládací prvky jsou takto skryty, protože po 15 minutách přestanou fungovat. Důvodem je vypršení platnosti WebHooks tokenu daného rozhraní.</p>
+</div>
               
             </div>
           </div><footer>

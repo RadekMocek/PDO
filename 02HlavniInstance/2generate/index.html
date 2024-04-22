@@ -67,12 +67,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../1explain/">/explain – Výklad teorie</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">/generate – Generace příkladů</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#princip-prikazu-generate">Princip příkazu /generate</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#rozhrani-prikazu-generate">Rozhraní příkazu /generate</a>
-    </li>
-    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../3render/">/render – Vykreslování matematiky</a>
                   </li>
@@ -134,6 +128,34 @@
 <p>Návod pro vypočítání příkladu funguje na stejném principu jako výklad teorie. Zprávy s návodem jsou postupně odeslány do textového kanálu.</p>
 <p>Pokud pro danou kategorii příkladů není návod dostupný, tlačítko pro jeho zobrazení nebude dostupné. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.</p>
 <h2 id="rozhrani-prikazu-generate">Rozhraní příkazu <code>/generate</code></h2>
+<p>Výběr kateogie příkladů z výběrového seznamu:
+<img alt="g" src="../../img/020301.gif" /></p>
+<p>Po výběru kategorie vypadá rozhraní následovně:</p>
+<script>
+
+ function onHoverLeave(event) {
+    let img = event.currentTarget;
+    let src = img.src.slice(0, -3);
+
+    if(event.type == "mouseenter"){
+        src += "gif";
+    }else{
+        src += "png";
+    }
+    img.src = src;
+ }
+ let images = document.querySelectorAll("img");
+
+ images.forEach((img) => {
+  if(img.src.endsWith(".gif")) {
+    img.src = img.src.slice(0, -3) + 'png';
+
+    img.addEventListener("mouseenter", onHoverLeave);
+    img.addEventListener("mouseleave", onHoverLeave);
+
+  }
+});
+</script>
               
             </div>
           </div><footer>
