@@ -15,7 +15,7 @@ __3.__ LingeBot je nyní členem vybraného serveru.
 
 ![h](../img/010302.png)
 
-## Jak zadávat příkazy, jak ověřit dostupnost LingeBota
+## Jak zadávat příkazy a jak ověřit dostupnost LingeBota
 
 __1.__ Napište do kolonky pro zadávání zpráv a příkazů řetězec `/ping`.
 

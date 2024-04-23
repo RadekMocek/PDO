@@ -2,7 +2,7 @@
 
 ## Jak vytvořit server
 
-Tato sekce popisuje, jak vytvořit vlastní server.
+Tato sekce popisuje, jak si vytvořit vlastní Discord server.
 
 __1.__ Klikněte na _Přidat server_.
 
