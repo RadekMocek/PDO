@@ -121,13 +121,96 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="vykreslovani-matematickych-vyrazu-pomoci-prikazu-render-text">Vykreslování matematických výrazů pomocí příkazu <code>/render</code> <code>&lt;text&gt;</code></h1>
+                <h1 id="vykreslovani-matematickych-vyrazu">Vykreslování matematických výrazů</h1>
 <h2 id="princip-prikazu-render-text">Princip příkazu <code>/render</code> <code>&lt;text&gt;</code></h2>
-<p>Příkaz <code>/render</code> odešle do textového kanálu obrázek s vykresleným matematickým výrazem. Matematický výraz je vykreslen podle parametru <code>&lt;text&gt;</code>, který je zadán ve speciálním formátu.</p>
+<p>Příkaz <code>/render</code> odešle do textového kanálu obrázek s&nbsp;vykresleným matematickým výrazem. Matematický výraz je vykreslen podle parametru <code>&lt;text&gt;</code>, který je zadán ve speciálním formátu.</p>
 <h2 id="rozhrani-prikazu-render-text">Rozhraní příkazu <code>/render</code> <code>&lt;text&gt;</code></h2>
+<p>Vykreslení výrazu a jeho následná úprava:<br>
+<img alt="g" src="../../img/020401.gif" /></p>
+<table>
+<thead>
+<tr>
+<th>Tlačítko</th>
+<th>Funkce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>✔️ Potvrdit</strong></td>
+<td>Ukončí rozhraní – tlačítka zmizí.</td>
+</tr>
+<tr>
+<td><strong>📝 Upravit</strong></td>
+<td>Vyvolá vyskakovací okno pro úpravu výrazu.</td>
+</tr>
+<tr>
+<td><strong>🗑️ Smazat</strong></td>
+<td>Smaže příslušnou zprávu.</td>
+</tr>
+</tbody>
+</table>
+<p>Tlačítka ze zprávy zmizí automaticky po 30 sekundách, aby zbytečně neznepřehledňovala konverzaci.</p>
 <h2 id="pravidla-pro-zapis-matematickych-vyrazu">Pravidla pro zápis matematických výrazů</h2>
+<p>Pro zápis matematických výrazů se používá Matplotlib Mathtext. Jedná se o&nbsp;podmnožinu jazyka TeX. Seznam všech podporovaných symbolů se nachází v&nbsp;<a href="https://matplotlib.org/stable/users/explain/text/mathtext.html#symbols" target="_blank">dokumentaci balíku Matplotlib</a>. Matplotlib Mathtext nepodporuje TeX prostředí typu <code>\begin{}\end{}</code>, do LingeBota byla ale přidána možnost vykreslovat matice a víceřádkové rovnice.</p>
 <h3 id="zapis-matic">Zápis matic</h3>
+<p>Zápis matic je inspirovaný jazykem MATLAB. Do hranatých závorek se postupně vepisují jednotlivé prvky matice po řádcích. Pro oddělení jednotlivých řádků se píše středník a pro oddelění jednotlivých prvků v&nbsp;řádku se píše čárka. Mezery nemají význam na vykreslení, ale mohou zpřehlednit zápis uživatelem. Pro vykreslení hranatých závorek, které se nepromění na matici, lze použít symbolů <code>\lbrack</code> a <code>\rbrack</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Vstup</th>
+<th>Výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[1, 2; 3, 4]</code></td>
+<td><img alt="s" src="../../img/svg/tj5XvNSd5E.svg" /></td>
+</tr>
+<tr>
+<td><strong>Uvnitř matic lze používat TeX příkazy:</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>[\cos{\alpha}, -\sin{\alpha}; \sin{\alpha}, \cos{\alpha}]</code></td>
+<td><img alt="s" src="../../img/svg/xT1wZ7NQk5.svg" /></td>
+</tr>
+<tr>
+<td><strong>Matice mohou být součástí výrazů:</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>A = [1, 2; 3, 4] \cdot [5, 6; 7, 8]</code></td>
+<td><img alt="s" src="../../img/svg/v4SLctegJw.svg" /></td>
+</tr>
+<tr>
+<td><strong>Matice nemohou být argumentem TeX příkazu:</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>B = \sqrt{[1, 2; 3, 4]}</code></td>
+<td>Nelze vykreslit</td>
+</tr>
+</tbody>
+</table>
 <h3 id="zapis-viceradkovych-rovnic">Zápis víceřádkových rovnic</h3>
+<p>Zapsaní dvou zpětných lomítek <code>\\</code> značí nový řádek. Řádky lze zarovnat pomocí amersandu <code>&amp;</code>.</p>
+<p>Zapsání ampersandu <code>&amp;</code> znamená, že znak, který se nachází bezprostředně za ním, bude ten zarovnávací. Obvykle se zarovnává podle rovnítka, zápis je pak tedy <code>&amp;=</code>. Pokud se kdekoliv v&nbsp;zápisu objeví dvě zpětná lomítka <code>\\</code>, je zápis vždy brán jako víceřádkový. Ve víceřádkovém zápisu je v&nbsp;každém řádku první výskyt ampersandu <code>&amp;</code> brán jako zarovnání a samotný ampersand tedy není vykreslen.</p>
+<table>
+<thead>
+<tr>
+<th>Vstup</th>
+<th>Výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x&amp;=5\\x+y&amp;=6\\C&amp;=[y,2;3,4]</code></td>
+<td><img alt="s" src="../../img/svg/aeg9W2l0Ey.svg" /></td>
+</tr>
+</tbody>
+</table>
+<script>const onHoverLeave = (event) => {let img = event.currentTarget;let src = img.src.slice(0, -3);if(event.type == "mouseenter"){src += "gif";}else{src += "png";}img.src = src;}
+let images = document.querySelectorAll("img[alt='g']");images.forEach((img) => {if(img.src.endsWith(".gif")) {img.src = img.src.slice(0, -3) + "png";img.addEventListener("mouseenter", onHoverLeave);img.addEventListener("mouseleave", onHoverLeave);}});</script>
               
             </div>
           </div><footer>

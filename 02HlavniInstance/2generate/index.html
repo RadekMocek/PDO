@@ -121,41 +121,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="generovani-prikladu-pomoci-prikazu-generate">Generování příkladů pomocí příkazu <code>/generate</code></h1>
+                <h1 id="generovani-prikladu">Generování příkladů</h1>
 <h2 id="princip-prikazu-generate">Princip příkazu <code>/generate</code></h2>
-<p>Po zadání příkazu <code>/generate</code> se v textovém kanálu objeví rozhraní pro generování příkladů. Nejprve se objeví výběrový seznam dostupných kategorií příkladů. Uživatel si vybere kategorii, která ho zajímá. Po zvolení kategorie si uživatel pomocí tlačítek může buď nechat vygenerovat první příklad, nebo zobrazit návod pro výpočet příkladů z dané kategorie.</p>
-<p>Po vygenerování příkladu je zpráva upravena a obsahuje textové zadání příkladu s případným obrázkem. Uživatel může pomocí tlačítek zobrazit výsledek nebo vygenerovat nový příklad.</p>
-<p>Návod pro vypočítání příkladu funguje na stejném principu jako výklad teorie. Zprávy s návodem jsou postupně odeslány do textového kanálu.</p>
+<p>Po zadání příkazu <code>/generate</code> se v&nbsp;textovém kanálu objeví rozhraní pro generování příkladů. Nejprve se objeví výběrový seznam dostupných kategorií příkladů. Uživatel si vybere kategorii, která ho zajímá. Po zvolení kategorie si uživatel pomocí tlačítek může buď nechat vygenerovat první příklad, nebo zobrazit návod pro výpočet příkladů z&nbsp;dané kategorie.</p>
+<p>Po vygenerování příkladu je zpráva upravena a obsahuje textové zadání příkladu s&nbsp;případným obrázkem. Uživatel může pomocí tlačítek zobrazit výsledek nebo vygenerovat nový příklad.</p>
+<p>Návod pro vypočítání příkladu funguje na stejném principu jako výklad teorie. Zprávy s&nbsp;návodem jsou postupně odeslány do textového kanálu.</p>
 <p>Pokud pro danou kategorii příkladů není návod dostupný, tlačítko pro jeho zobrazení nebude dostupné. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.</p>
 <h2 id="rozhrani-prikazu-generate">Rozhraní příkazu <code>/generate</code></h2>
-<p>Výběr kateogie příkladů z výběrového seznamu:
+<p>Výběr kateogie příkladů z&nbsp;výběrového seznamu:<br>
 <img alt="g" src="../../img/020301.gif" /></p>
-<p>Po výběru kategorie vypadá rozhraní následovně:</p>
-<script>
-
- function onHoverLeave(event) {
-    let img = event.currentTarget;
-    let src = img.src.slice(0, -3);
-
-    if(event.type == "mouseenter"){
-        src += "gif";
-    }else{
-        src += "png";
-    }
-    img.src = src;
- }
- let images = document.querySelectorAll("img");
-
- images.forEach((img) => {
-  if(img.src.endsWith(".gif")) {
-    img.src = img.src.slice(0, -3) + 'png';
-
-    img.addEventListener("mouseenter", onHoverLeave);
-    img.addEventListener("mouseleave", onHoverLeave);
-
-  }
-});
-</script>
+<p>Po výběru kategorie se rozhraní přepne do <em>stavu A</em>:<br>
+<img alt="h" src="../../img/020302.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Tlačítko</th>
+<th>Funkce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🧮 Generovat příklad</strong></td>
+<td>Přepne do <em>stavu B</em>, vygeneruje a zobrazí nový příklad.</td>
+</tr>
+<tr>
+<td><strong>❔ Jak počítat</strong></td>
+<td>Odešle do textového kanálu zprávy<br>s tutoriálem pro výpočet příkladu z&nbsp;vybrané kategorie.</td>
+</tr>
+<tr>
+<td><strong>📨 Uložit do DMs</strong> *</td>
+<td>Přepošle tutoriál pro výpočet do DMs.</td>
+</tr>
+<tr>
+<td><strong>🚫 Ukončit a smazat</strong></td>
+<td>Ukončí rozhraní a smaže všechny příslušné zprávy.</td>
+</tr>
+<tr>
+<td><strong>🆕 Nový příklad</strong></td>
+<td>Vygeneruje a zobrazí nový příklad.</td>
+</tr>
+<tr>
+<td><strong>🛂 Zobrazit výsledek</strong></td>
+<td>Zobrazí výsledek (postup) k&nbsp;atuálnímu příkladu.</td>
+</tr>
+<tr>
+<td><strong>⤴️ Změnit kategorii / Ukončit</strong></td>
+<td>Přepne do <em>stavu A</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>*&nbsp;Tlačítko se objeví pouze po použití <strong>❔ Jak počítat</strong> pod nově odeslanými zprávami.</p>
+<script>const onHoverLeave = (event) => {let img = event.currentTarget;let src = img.src.slice(0, -3);if(event.type == "mouseenter"){src += "gif";}else{src += "png";}img.src = src;}
+let images = document.querySelectorAll("img[alt='g']");images.forEach((img) => {if(img.src.endsWith(".gif")) {img.src = img.src.slice(0, -3) + "png";img.addEventListener("mouseenter", onHoverLeave);img.addEventListener("mouseleave", onHoverLeave);}});</script>
               
             </div>
           </div><footer>
