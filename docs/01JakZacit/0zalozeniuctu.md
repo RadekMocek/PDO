@@ -5,7 +5,7 @@ Tato sekce popisuje, jak si založit uživatelský účet na platformě Discord.
 !!! note "Jak se dostat k&nbsp;platformě Discord?"
     Discord je dostupný buď ve webové aplikaci na <a href="https://discord.com/app" target="_blank">https://discord.com/app</a>, nebo jako program pro operační systémy Windows, Linux, MacOS, Android a iOS. Podrobnější informace o&nbsp;podporovaných systémech se nacházejí <a href="https://support.discord.com/hc/en-us/articles/213491697-What-are-the-OS-system-requirements-for-Discord" target="_blank">na webu Discordu v&nbsp;sekci FAQ</a>.
 
-__1.__ Přejděte na <a href="https://discord.com/app" target="_blank">https://discord.com/app</a> a klikněte na _Registruj se_.
+__1.__ Otevřete ve webovém prohlížeči stránku <a href="https://discord.com/app" target="_blank">https://discord.com/app</a> a klikněte na _Registruj se_.
 
 ![h](../img/010101.png)
 

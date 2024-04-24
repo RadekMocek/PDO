@@ -20,17 +20,20 @@ Výběr kategorie příkladů z&nbsp;výběrového seznamu:<br>
 Po výběru kategorie se rozhraní přepne do _stavu A_:<br>
 ![h](../img/020302.png)
 
-Tlačítko|Funkce
+Tlačítko (_stav A_)|Funkce
 ---|---
 __🧮 Generovat příklad__|Přepne do _stavu B_, vygeneruje a zobrazí nový příklad.
 __❔ Jak počítat__|Odešle do textového kanálu zprávy<br>s tutoriálem pro výpočet příkladu z&nbsp;vybrané kategorie.
 __📨 Uložit do DMs__ *|Přepošle tutoriál pro výpočet do DMs.
 __🚫 Ukončit a smazat__|Ukončí rozhraní a smaže všechny příslušné zprávy.
+
+*&nbsp;Tlačítko se objeví pouze po použití __❔ Jak počítat__ pod nově odeslanými zprávami.
+
+Tlačítko (_stav B_)|Funkce
+---|---
 __🆕 Nový příklad__|Vygeneruje a zobrazí nový příklad.
 __🛂 Zobrazit výsledek__|Zobrazí výsledek (postup) k&nbsp;atuálnímu příkladu.
 __⤴️ Změnit kategorii / Ukončit__|Přepne do _stavu A_.
-
-*&nbsp;Tlačítko se objeví pouze po použití __❔ Jak počítat__ pod nově odeslanými zprávami.
 
 <script>const onHoverLeave = (event) => {let img = event.currentTarget;let src = img.src.slice(0, -3);if(event.type == "mouseenter"){src += "gif";}else{src += "png";}img.src = src;}
 let images = document.querySelectorAll("img[alt='g']");images.forEach((img) => {if(img.src.endsWith(".gif")) {img.src = img.src.slice(0, -3) + "png";img.addEventListener("mouseenter", onHoverLeave);img.addEventListener("mouseleave", onHoverLeave);}});</script>

@@ -9,3 +9,12 @@ code {
     color: black !important;
     background-color: floralwhite !important;
 }
+
+.icon-home {
+    padding: 0 !important;
+    /*margin: 0 !important;*/
+}
+
+.rst-versions {
+    display: none;
+}

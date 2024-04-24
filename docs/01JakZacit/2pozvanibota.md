@@ -9,7 +9,7 @@ __2.__ Ve výběrovém seznamu zvolte server, na který chcete bota přidat. Pot
 
 ![h](../img/010301.png)
 
-__3.__ LingeBot je nyní členem vybraného serveru. V hlavním textovém kanálu tohoto serveru se objeví oznámení o připojení LingeBota.
+__3.__ LingeBot je nyní členem vybraného serveru. V&nbsp;hlavním textovém kanálu tohoto serveru se objeví oznámení o&nbsp;připojení LingeBota.
 
 ![h](../img/010302.png)
 

@@ -26,7 +26,7 @@ Jedná se o&nbsp;místo, kde na platformě Discord probíhají komunikace typu _
 
 __Skupinová konverzace__ je místo, kde může komunikovat až 10 uživatelů najednou.
 
-Kromě počtu členů jsou funkce skupinové konverzace totožné s DMs.
+Kromě počtu členů jsou funkce skupinové konverzace totožné s&nbsp;DMs.
 
 ---
 
@@ -87,7 +87,7 @@ Vlastního bota lze vytvořit na webu _Discord Developer Portal_, kde je mu v&nb
 !!! Note "Upřesnění: Bot vs. Aplikace"
     Jako Discord aplikace se označuje vše, co oficiálním způsobem komunikuje s&nbsp;Discord API. K&nbsp;aplikaci pak může být přiřazen bot, který je její uživatelskou reprezentací.
 
-    Bota lze od běžného uživatele rozeznat podle toho, že má vedle svého jména napsáno _BOT_, při psaní tohoto manuálu (19. 4. 2024) byl ale tento nápis změněn na _APLIKACE_. Je tedy možné, že v&nbsp;oficiálním názvosloví dojde ke změnám. Tento manuál bude prozatím používat starý pojem _bot_.
+    Bota lze od běžného uživatele rozeznat podle toho, že má vedle svého jména napsáno _BOT_, při psaní tohoto manuálu (19. 4. 2024) byl ale tento nápis změněn na _APLIKACE_ a o&nbsp;pár dní později na _APP_. Je tedy možné, že v&nbsp;oficiálním názvosloví dojde ke změnám. Tento manuál bude prozatím používat starý pojem _bot_.
 
 ---
 
