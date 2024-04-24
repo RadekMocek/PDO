@@ -56,7 +56,42 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/4docker/</loc>
+         <loc>https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/0vytvoreniaplikacenaddp/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/1prvnispusteni/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/2slashsync/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/3docker/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://RadekMocek.github.io/PDO/04VlastniObsah/0popisprojektu/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://RadekMocek.github.io/PDO/04VlastniObsah/1markdownpravidla/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://RadekMocek.github.io/PDO/04VlastniObsah/2vlastniteorie/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://RadekMocek.github.io/PDO/04VlastniObsah/3vlastnipriklady/</loc>
          <lastmod>2024-04-24</lastmod>
          <changefreq>daily</changefreq>
     </url>

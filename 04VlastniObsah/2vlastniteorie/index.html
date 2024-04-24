@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/02HlavniInstance/2generate/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/04VlastniObsah/2vlastniteorie/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>/generate – Generace příkladů - LingeBot manuál</title>
+    <title>Vlastní téma pro výklad teorie - LingeBot manuál</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "/generate \u2013 Generace p\u0159\u00edklad\u016f";
-        var mkdocs_page_input_path = "02HlavniInstance\\2generate.md";
-        var mkdocs_page_url = "/PDO/02HlavniInstance/2generate/";
+        var mkdocs_page_name = "Vlastn\u00ed t\u00e9ma pro v\u00fdklad teorie";
+        var mkdocs_page_input_path = "04VlastniObsah\\2vlastniteorie.md";
+        var mkdocs_page_url = "/PDO/04VlastniObsah/2vlastniteorie/";
       </script>
     
     <!--[if lt IE 9]>
@@ -59,16 +59,16 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../0dostupneprikazy/">Seznam dostupných příkazů</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/0dostupneprikazy/">Seznam dostupných příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../1explain/">/explain – Výklad teorie</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/1explain/">/explain – Výklad teorie</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">/generate – Generace příkladů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/2generate/">/generate – Generace příkladů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../3render/">/render – Vykreslování matematiky</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/3render/">/render – Vykreslování matematiky</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../4setup/">/setup – Nastavení bota</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/4setup/">/setup – Nastavení bota</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Provoz vlastní instance</span></p>
@@ -83,14 +83,14 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/0popisprojektu/">Struktura projektu</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../0popisprojektu/">Struktura projektu</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/1markdownpravidla/">Pravidla pro zápis Markdown souborů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../1markdownpravidla/">Pravidla pro zápis Markdown souborů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/2vlastniteorie/">Vlastní téma pro výklad teorie</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Vlastní téma pro výklad teorie</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/3vlastnipriklady/">Vlastní kategorie příkladů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../3vlastnipriklady/">Vlastní kategorie příkladů</a>
                   </li>
               </ul>
       </div>
@@ -107,8 +107,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Dostupné funkce a jak je používat</li>
-      <li class="breadcrumb-item active">/generate – Generace příkladů</li>
+          <li class="breadcrumb-item">Přidání vlastního obsahu</li>
+      <li class="breadcrumb-item active">Vlastní téma pro výklad teorie</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -117,75 +117,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="generovani-prikladu">Generování příkladů</h1>
-<h2 id="princip-prikazu-generate">Princip příkazu <code>/generate</code></h2>
-<p>Po odeslání příkazu <code>/generate</code> se v&nbsp;textovém kanálu objeví rozhraní pro generování příkladů. Nejprve se objeví výběrový seznam dostupných kategorií příkladů. Uživatel si vybere kategorii, která ho zajímá. Po zvolení kategorie si uživatel pomocí tlačítek může buď nechat vygenerovat první příklad, nebo zobrazit návod pro výpočet příkladů z&nbsp;dané kategorie.</p>
-<p>Po vygenerování příkladu je zpráva upravena a obsahuje textové zadání příkladu s&nbsp;případným obrázkem. Uživatel může pomocí tlačítek zobrazit výsledek nebo vygenerovat nový příklad.</p>
-<p>Návod pro vypočítání příkladu funguje na stejném principu jako výklad teorie. Zprávy s&nbsp;návodem jsou postupně odeslány do textového kanálu.</p>
-<p>Pokud pro danou kategorii příkladů není návod dostupný, tlačítko pro jeho zobrazení nebude dostupné. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.</p>
-<hr />
-<h2 id="rozhrani-prikazu-generate">Rozhraní příkazu <code>/generate</code></h2>
-<p>Výběr kategorie příkladů z&nbsp;výběrového seznamu:<br>
-<img alt="g" src="../../img/020301.gif" /></p>
-<p>Po výběru kategorie se rozhraní přepne do <em>stavu A</em>:<br>
-<img alt="h" src="../../img/020302.png" /></p>
-<table>
-<thead>
-<tr>
-<th>Tlačítko (<em>stav A</em>)</th>
-<th>Funkce</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🧮 Generovat příklad</strong></td>
-<td>Přepne do <em>stavu B</em>, vygeneruje a zobrazí nový příklad.</td>
-</tr>
-<tr>
-<td><strong>❔ Jak počítat</strong></td>
-<td>Odešle do textového kanálu zprávy<br>s tutoriálem pro výpočet příkladu z&nbsp;vybrané kategorie.</td>
-</tr>
-<tr>
-<td><strong>📨 Uložit do DMs</strong> *</td>
-<td>Přepošle tutoriál pro výpočet do DMs.</td>
-</tr>
-<tr>
-<td><strong>🚫 Ukončit a smazat</strong></td>
-<td>Ukončí rozhraní a smaže všechny příslušné zprávy.</td>
-</tr>
-</tbody>
-</table>
-<p>*&nbsp;Tlačítko se objeví pouze po použití <strong>❔ Jak počítat</strong> pod nově odeslanými zprávami.</p>
-<table>
-<thead>
-<tr>
-<th>Tlačítko (<em>stav B</em>)</th>
-<th>Funkce</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🆕 Nový příklad</strong></td>
-<td>Vygeneruje a zobrazí nový příklad.</td>
-</tr>
-<tr>
-<td><strong>🛂 Zobrazit výsledek</strong></td>
-<td>Zobrazí výsledek (postup) k&nbsp;atuálnímu příkladu.</td>
-</tr>
-<tr>
-<td><strong>⤴️ Změnit kategorii / Ukončit</strong></td>
-<td>Přepne do <em>stavu A</em>.</td>
-</tr>
-</tbody>
-</table>
-<script>const onHoverLeave = (event) => {let img = event.currentTarget;let src = img.src.slice(0, -3);if(event.type == "mouseenter"){src += "gif";}else{src += "png";}img.src = src;}
-let images = document.querySelectorAll("img[alt='g']");images.forEach((img) => {if(img.src.endsWith(".gif")) {img.src = img.src.slice(0, -3) + "png";img.addEventListener("mouseenter", onHoverLeave);img.addEventListener("mouseleave", onHoverLeave);}});</script>
+                
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1explain/" class="btn btn-neutral float-left" title="/explain – Výklad teorie"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../3render/" class="btn btn-neutral float-right" title="/render – Vykreslování matematiky">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../1markdownpravidla/" class="btn btn-neutral float-left" title="Pravidla pro zápis Markdown souborů"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../3vlastnipriklady/" class="btn btn-neutral float-right" title="Vlastní kategorie příkladů">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -208,10 +146,10 @@ let images = document.querySelectorAll("img[alt='g']");images.forEach((img) => {
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../1explain/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../1markdownpravidla/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../3render/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../3vlastnipriklady/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

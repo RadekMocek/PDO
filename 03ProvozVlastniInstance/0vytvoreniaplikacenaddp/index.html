@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/01JakZacit/2pozvanibota/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/0vytvoreniaplikacenaddp/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Přidání bota na server a odesílání příkazů - LingeBot manuál</title>
+    <title>Vytvoření aplikace na Discord Developer Portal - LingeBot manuál</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "P\u0159id\u00e1n\u00ed bota na server a odes\u00edl\u00e1n\u00ed p\u0159\u00edkaz\u016f";
-        var mkdocs_page_input_path = "01JakZacit\\2pozvanibota.md";
-        var mkdocs_page_url = "/PDO/01JakZacit/2pozvanibota/";
+        var mkdocs_page_name = "Vytvo\u0159en\u00ed aplikace na Discord Developer Portal";
+        var mkdocs_page_input_path = "03ProvozVlastniInstance\\0vytvoreniaplikacenaddp.md";
+        var mkdocs_page_url = "/PDO/03ProvozVlastniInstance/0vytvoreniaplikacenaddp/";
       </script>
     
     <!--[if lt IE 9]>
@@ -50,12 +50,12 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Jak začít</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../0zalozeniuctu/">Založení uživatelského účtu</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/0zalozeniuctu/">Založení uživatelského účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../1zalozeniserveru/">Vytvoření serveru a jeho uživatelské rozhraní</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru a jeho uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Přidání bota na server a odesílání příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server a odesílání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
@@ -72,14 +72,14 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Provoz vlastní instance</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/0vytvoreniaplikacenaddp/">Vytvoření aplikace na Discord Developer Portal</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Vytvoření aplikace na Discord Developer Portal</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/1prvnispusteni/">Stažení zdrojových kódů a první spuštění</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../1prvnispusteni/">Stažení zdrojových kódů a první spuštění</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/2slashsync/">Synchronizace příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2slashsync/">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../3docker/">Spuštění v prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -107,8 +107,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Jak začít</li>
-      <li class="breadcrumb-item active">Přidání bota na server a odesílání příkazů</li>
+          <li class="breadcrumb-item">Provoz vlastní instance</li>
+      <li class="breadcrumb-item active">Vytvoření aplikace na Discord Developer Portal</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -117,29 +117,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="pridani-bota-na-server-a-overeni-jeho-dostupnosti-prikazem-ping">Přidání bota na server a oveření jeho dostupnosti příkazem <code>/ping</code></h1>
-<h2 id="jak-na-svuj-server-pridat-hlavni-instanci-lingebota">Jak na svůj server přidat hlavní instanci LingeBota</h2>
-<p><strong>1.</strong> V&nbsp;prohlížeči, ve kterém jste přihlášeni do webové aplikace Discord, otevřete tento zvací odkaz:
-<a href="https://discord.com/oauth2/authorize?client_id=1160906076179415070&amp;permissions=2416045056&amp;scope=bot+applications.commands">https://discord.com/oauth2/authorize<br>?client_id=1160906076179415070<br>&amp;permissions=2416045056<br>&amp;scope=bot+applications.commands</a></p>
-<p><strong>2.</strong> Ve výběrovém seznamu zvolte server, na který chcete bota přidat. Potvrďte tlačítkem <em>Pokračovat</em> a v&nbsp;následujícím okně tlačítkem <em>Autorizovat</em>.</p>
-<p><img alt="h" src="../../img/010301.png" /></p>
-<p><strong>3.</strong> LingeBot je nyní členem vybraného serveru. V&nbsp;hlavním textovém kanálu tohoto serveru se objeví oznámení o&nbsp;připojení LingeBota.</p>
-<p><img alt="h" src="../../img/010302.png" /></p>
-<hr />
-<h2 id="jak-odesilat-prikazy-a-overit-dostupnost-lingebota">Jak odesílat příkazy a ověřit dostupnost LingeBota</h2>
-<p><strong>1.</strong> Napište do kolonky pro zadávání zpráv a příkazů řetězec <code>/ping</code>.</p>
-<p><img alt="h" src="../../img/010303.png" /></p>
-<p>Discord během psaní začne našeptávat odpovídající příkazy. Po dopsání celého řetězce už zbyde jen příkaz <code>/ping</code>. Pokud se na serveru nachází více botů se stejně pojmenovaným příkazem, zobrazí se zde všechny. Nejvíce relevantní příkaz v&nbsp;seznamu našeptávače je zvýrazněn a tedy vybrán. Pro vybrání jiného lze využít šipek na klávesnici. Výběr je potvrzen stiskem klávesy enter. Alternativně lze příkaz vybrat kliknutím myši.</p>
-<p><strong>2.</strong> Stiskněte klávesu enter pro potvrzení výběru příkazu <code>/ping</code>, druhým stiskem klávesy enter příkaz odešlete.</p>
-<p><img alt="h" src="../../img/010304.png" /></p>
-<p><strong>3.</strong> Pokud je bot funkční, odpoví zprávou se základními informacemi o&nbsp;provozu.</p>
-<p><img alt="h" src="../../img/010305.png" /></p>
+                <h1 id="vytvoreni-aplikace-na-discord-developer-portal">Vytvoření aplikace na Discord Developer Portal</h1>
+<p>Tato sekce popisuje, jak vytvořit aplikaci na Discord Developer Portal včetně jejího korektního nastavení pro provoz vlastní instance LingeBota, vygenerování zvacího odkazu a vygenerování tokenu.</p>
+<p><strong>1.</strong> Otevřete ve webovém prohlížeči stránku <a href="https://discord.com/developers/applications" target="_blank">https://discord.com/developers/applications</a> a klikněte na tlačítko <em>New Application</em>.</p>
+<p><img alt="h" src="../../img/030101.png" /></p>
+<p><strong>2.</strong> Do textového pole napište, jak chcete, aby se váš bot jmenoval. Poté zaškrtněte zaškrtávací pole pro souhlas s&nbsp;podmínkami. Nakonec potvrďte kliknutím na tlačítko <em>Create</em>.</p>
+<p><img alt="h" src="../../img/030102.png" /></p>
+<p><strong>3.</strong> Přejděte do sekce <em>Installation</em> kliknutím na příslušné tlačítko v&nbsp;levé navigační liště.</p>
+<p><img alt="h" src="../../img/030103.png" /></p>
+<p><strong>4.</strong> V&nbsp;části <em>Install Link</em> zvolte ve výběrovém seznamu možnost <em>Discord Provided Link</em>.</p>
+<p><img alt="h" src="../../img/030104.png" /></p>
+<p><strong>5.</strong> Do pole <em>SCOPES</em> v&nbsp;části <em>Default Install Settings</em> přidejte položku <code>bot</code>. Můžete buď napsat slovo <em>bot</em> jako u&nbsp;textového pole, nebo položku zvolit jako u&nbsp;výběrového seznamu.</p>
+<p><img alt="h" src="../../img/030105.png" /></p>
+<p><strong>6.</strong> Do nově objeveného pole <em>PERMISSIONS</em> přidejte tyto položky:</p>
+<ul>
+<li><code>Attach Files</code></li>
+<li><code>Embed Links</code></li>
+<li><code>Manage Messages</code></li>
+<li><code>Manage Roles</code></li>
+<li><code>Read Message History</code></li>
+<li><code>Read Messages/View Channels</code></li>
+<li><code>Send Messages</code></li>
+<li><code>Use Slash Commands</code></li>
+</ul>
+<p><img alt="h" src="../../img/030106.png" /></p>
+<p><strong>7.</strong> Uložte kliknutím na tlačítko <em>Save Changes</em>.</p>
+<p><img alt="h" src="../../img/030107_Save.png" /></p>
+<p><strong>8.</strong> Z&nbsp;části <em>Install Link</em> si kliknutím na tlačítko <em>Copy</em> zkopírujte zvací odkaz vašeho bota a někam si ho uložte.</p>
+<p><img alt="h" src="../../img/030108.png" /></p>
+<p><strong>9.</strong> Přejděte do sekce <em>Bot</em> kliknutím na příslušné tlačítko v&nbsp;levé navigační liště.</p>
+<p><img alt="h" src="../../img/030109.png" /></p>
+<p><strong>10.</strong> Kliknutím na příslušný přepínač povolte možnost <em>MESSAGE CONTENT INTENT</em>.</p>
+<p><img alt="h" src="../../img/030110.png" /></p>
+<p><strong>11.</strong> Uložte kliknutím na tlačítko <em>Save Changes</em>.</p>
+<p><img alt="h" src="../../img/030107_Save.png" /></p>
+<p><strong>12.</strong> V části <em>TOKEN</em> klikněte na tlačítko <em>Reset Token</em>, potvrďte tlačítkem <em>Yes, do it!</em>, poté zadejte své heslo a potvrďte tlačítkem <em>Submit</em>.</p>
+<p><img alt="h" src="../../img/030112.png" /></p>
+<p><strong>13.</strong> V části <em>TOKEN</em> se objevil token vašeho bota. Kliknutím na tlačítko <em>Copy</em> token zkopírujte a někam si ho uložte. Tento token uchovejte v&nbsp;tajnosti.</p>
+<p><img alt="h" src="../../img/030113.png" /></p>
+<p><strong>14.</strong> Bota nyní můžete přes jeho zvací odkaz pozvat na váš server stejným způsobem, <a href="../../01JakZacit/2pozvanibota/">jako jste pozvali hlavní instanci bota</a>. Bot bude offline, protože zatím neběží jeho obslužný program.</p>
+<p><img alt="h" src="../../img/030114.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1zalozeniserveru/" class="btn btn-neutral float-left" title="Vytvoření serveru a jeho uživatelské rozhraní"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../02HlavniInstance/0dostupneprikazy/" class="btn btn-neutral float-right" title="Seznam dostupných příkazů">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../02HlavniInstance/4setup/" class="btn btn-neutral float-left" title="/setup – Nastavení bota"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1prvnispusteni/" class="btn btn-neutral float-right" title="Stažení zdrojových kódů a první spuštění">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -162,10 +185,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../1zalozeniserveru/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../02HlavniInstance/4setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../02HlavniInstance/0dostupneprikazy/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../1prvnispusteni/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

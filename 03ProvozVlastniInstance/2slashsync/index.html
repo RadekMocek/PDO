@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/02HlavniInstance/2generate/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/03ProvozVlastniInstance/2slashsync/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>/generate – Generace příkladů - LingeBot manuál</title>
+    <title>Synchronizace příkazů - LingeBot manuál</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "/generate \u2013 Generace p\u0159\u00edklad\u016f";
-        var mkdocs_page_input_path = "02HlavniInstance\\2generate.md";
-        var mkdocs_page_url = "/PDO/02HlavniInstance/2generate/";
+        var mkdocs_page_name = "Synchronizace p\u0159\u00edkaz\u016f";
+        var mkdocs_page_input_path = "03ProvozVlastniInstance\\2slashsync.md";
+        var mkdocs_page_url = "/PDO/03ProvozVlastniInstance/2slashsync/";
       </script>
     
     <!--[if lt IE 9]>
@@ -59,27 +59,27 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../0dostupneprikazy/">Seznam dostupných příkazů</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/0dostupneprikazy/">Seznam dostupných příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../1explain/">/explain – Výklad teorie</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/1explain/">/explain – Výklad teorie</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">/generate – Generace příkladů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/2generate/">/generate – Generace příkladů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../3render/">/render – Vykreslování matematiky</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/3render/">/render – Vykreslování matematiky</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../4setup/">/setup – Nastavení bota</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02HlavniInstance/4setup/">/setup – Nastavení bota</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Provoz vlastní instance</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/0vytvoreniaplikacenaddp/">Vytvoření aplikace na Discord Developer Portal</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../0vytvoreniaplikacenaddp/">Vytvoření aplikace na Discord Developer Portal</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/1prvnispusteni/">Stažení zdrojových kódů a první spuštění</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../1prvnispusteni/">Stažení zdrojových kódů a první spuštění</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/2slashsync/">Synchronizace příkazů</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../3docker/">Spuštění v prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -107,8 +107,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Dostupné funkce a jak je používat</li>
-      <li class="breadcrumb-item active">/generate – Generace příkladů</li>
+          <li class="breadcrumb-item">Provoz vlastní instance</li>
+      <li class="breadcrumb-item active">Synchronizace příkazů</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -117,75 +117,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="generovani-prikladu">Generování příkladů</h1>
-<h2 id="princip-prikazu-generate">Princip příkazu <code>/generate</code></h2>
-<p>Po odeslání příkazu <code>/generate</code> se v&nbsp;textovém kanálu objeví rozhraní pro generování příkladů. Nejprve se objeví výběrový seznam dostupných kategorií příkladů. Uživatel si vybere kategorii, která ho zajímá. Po zvolení kategorie si uživatel pomocí tlačítek může buď nechat vygenerovat první příklad, nebo zobrazit návod pro výpočet příkladů z&nbsp;dané kategorie.</p>
-<p>Po vygenerování příkladu je zpráva upravena a obsahuje textové zadání příkladu s&nbsp;případným obrázkem. Uživatel může pomocí tlačítek zobrazit výsledek nebo vygenerovat nový příklad.</p>
-<p>Návod pro vypočítání příkladu funguje na stejném principu jako výklad teorie. Zprávy s&nbsp;návodem jsou postupně odeslány do textového kanálu.</p>
-<p>Pokud pro danou kategorii příkladů není návod dostupný, tlačítko pro jeho zobrazení nebude dostupné. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.</p>
-<hr />
-<h2 id="rozhrani-prikazu-generate">Rozhraní příkazu <code>/generate</code></h2>
-<p>Výběr kategorie příkladů z&nbsp;výběrového seznamu:<br>
-<img alt="g" src="../../img/020301.gif" /></p>
-<p>Po výběru kategorie se rozhraní přepne do <em>stavu A</em>:<br>
-<img alt="h" src="../../img/020302.png" /></p>
-<table>
-<thead>
-<tr>
-<th>Tlačítko (<em>stav A</em>)</th>
-<th>Funkce</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🧮 Generovat příklad</strong></td>
-<td>Přepne do <em>stavu B</em>, vygeneruje a zobrazí nový příklad.</td>
-</tr>
-<tr>
-<td><strong>❔ Jak počítat</strong></td>
-<td>Odešle do textového kanálu zprávy<br>s tutoriálem pro výpočet příkladu z&nbsp;vybrané kategorie.</td>
-</tr>
-<tr>
-<td><strong>📨 Uložit do DMs</strong> *</td>
-<td>Přepošle tutoriál pro výpočet do DMs.</td>
-</tr>
-<tr>
-<td><strong>🚫 Ukončit a smazat</strong></td>
-<td>Ukončí rozhraní a smaže všechny příslušné zprávy.</td>
-</tr>
-</tbody>
-</table>
-<p>*&nbsp;Tlačítko se objeví pouze po použití <strong>❔ Jak počítat</strong> pod nově odeslanými zprávami.</p>
-<table>
-<thead>
-<tr>
-<th>Tlačítko (<em>stav B</em>)</th>
-<th>Funkce</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🆕 Nový příklad</strong></td>
-<td>Vygeneruje a zobrazí nový příklad.</td>
-</tr>
-<tr>
-<td><strong>🛂 Zobrazit výsledek</strong></td>
-<td>Zobrazí výsledek (postup) k&nbsp;atuálnímu příkladu.</td>
-</tr>
-<tr>
-<td><strong>⤴️ Změnit kategorii / Ukončit</strong></td>
-<td>Přepne do <em>stavu A</em>.</td>
-</tr>
-</tbody>
-</table>
-<script>const onHoverLeave = (event) => {let img = event.currentTarget;let src = img.src.slice(0, -3);if(event.type == "mouseenter"){src += "gif";}else{src += "png";}img.src = src;}
-let images = document.querySelectorAll("img[alt='g']");images.forEach((img) => {if(img.src.endsWith(".gif")) {img.src = img.src.slice(0, -3) + "png";img.addEventListener("mouseenter", onHoverLeave);img.addEventListener("mouseleave", onHoverLeave);}});</script>
+                <h1 id="synchronizace-prikazu">Synchronizace příkazů</h1>
+<p>Pokud se pokusíte odeslat nějaký z&nbsp;příkazů vašeho LingeBota, zjistíte, že žádný z&nbsp;nich není součástí našeptávání a z&nbsp;toho důvodu nelze žádný příkaz použít. Podpůrné příkazy totiž musí být synchronizovány s&nbsp;platformou Discord. K&nbsp;tomu slouží prefixový příkaz <code>$&gt; slash_sync</code>, který je nutné botovi odeslat v&nbsp;DMs.</p>
+<p><strong>1.</strong> Klikněte na profil bota v&nbsp;seznamu členů serveru.</p>
+<p><strong>2.</strong> Do textového pole <em>Poslat zprávu @jméno_vašeho_bota</em> napiště prefixový příkaz <code>$&gt; slash_sync</code>.</p>
+<p><strong>3.</strong> Potvrďte stisknutím klávesy enter.</p>
+<p><strong>4.</strong> Budete přesměrování do DMs, kde bot potvrdí požadavek na synchronizaci.</p>
+<p><img alt="h" src="../../img/030301.png" /></p>
+<div class="admonition caution">
+<p class="admonition-title">Upozornění: Doba trvání synchronizace</p>
+<p>Synchronizace trvá několik minut. V&nbsp;DMs obvykle příkazy začnou fungovat mnohem rychleji.</p>
+</div>
+<p><strong>5.</strong> Po chvilce by měly v&nbsp;DMs začít fungovat příkazy, to můžete otestovat např. příkazem <code>/ping</code>.</p>
+<p><img alt="h" src="../../img/030302.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1explain/" class="btn btn-neutral float-left" title="/explain – Výklad teorie"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../3render/" class="btn btn-neutral float-right" title="/render – Vykreslování matematiky">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../1prvnispusteni/" class="btn btn-neutral float-left" title="Stažení zdrojových kódů a první spuštění"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../3docker/" class="btn btn-neutral float-right" title="Spuštění v prostředí Docker">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -208,10 +158,10 @@ let images = document.querySelectorAll("img[alt='g']");images.forEach((img) => {
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../1explain/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../1prvnispusteni/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../3render/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../3docker/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
