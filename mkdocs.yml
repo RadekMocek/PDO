@@ -20,8 +20,8 @@ nav:
     - Důležité pojmy: concepts.md
   - Jak začít:
     - Založení uživatelského účtu: 01JakZacit/0zalozeniuctu.md
-    - Vytvoření serveru a uživatelské rozhraní: 01JakZacit/1zalozeniserveru.md
-    - Přidání bota na server, zadávání příkazů: 01JakZacit/2pozvanibota.md
+    - Vytvoření serveru<br>a jeho uživatelské rozhraní: 01JakZacit/1zalozeniserveru.md
+    - Přidání bota na server<br>a odesílání příkazů: 01JakZacit/2pozvanibota.md
   - Dostupné funkce a jak je používat:
     - Seznam dostupných příkazů: 02HlavniInstance/0dostupneprikazy.md
     - /explain – Výklad teorie  : 02HlavniInstance/1explain.md
@@ -33,7 +33,7 @@ nav:
     - První spuštění: 03ProvozVlastniInstance/h.md
     - Synchronizace příkazů: 03ProvozVlastniInstance/h.md
     - Seznam příkazů pro provozovatele: 03ProvozVlastniInstance/h.md
-    - Spuštění v prostředí Docker: 03ProvozVlastniInstance/4docker.md
+    - Spuštění v&nbsp;prostředí Docker: 03ProvozVlastniInstance/4docker.md
   - Přidání vlastního obsahu:
     - Popis projektu: 04VlastniObsah/h.md
     - Pravidla pro zápis MD souborů: 04VlastniObsah/h.md

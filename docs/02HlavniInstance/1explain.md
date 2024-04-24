@@ -2,17 +2,19 @@
 
 ## Princip příkazu `/explain`
 
-Po zadání příkazu `/explain` se v&nbsp;textovém kanálu objeví rozhraní pro výklad teorie. Výklad funguje tak, že bot do textového kanálu odesílá zprávy, které obsahují výpisky z&nbsp;konkrétního matematického tématu. Tyto výpisky jsou vytvořeny provozovatelem bota.
+Po odeslání příkazu `/explain` se v&nbsp;textovém kanálu objeví rozhraní pro výklad teorie. Výklad funguje tak, že bot do textového kanálu odesílá zprávy, které obsahují výpisky z&nbsp;uživatelem zvoleného matematického tématu. Tyto výpisky jsou vytvořeny provozovatelem bota.
 
-Teoretické materiály se dělí na témata, která se pak dělí na podtémata. Po zadání příkazu `/explain` se nejprve objeví výběrový seznam, kde si uživatel zvolí jedno téma, které ho zajímá. V&nbsp;textovém kanálu se pak vždy nachází pouze zprávy, které patří k&nbsp;jednomu podtématu vybraného tématu. Mezi podtématy lze přepínat pomocí tlačítek nebo výběrového seznamu.
+Teoretické materiály se dělí na témata, která se pak dělí na podtémata. Po odeslání příkazu `/explain` se nejprve objeví výběrový seznam, kde si uživatel zvolí jedno téma, které ho zajímá. V&nbsp;textovém kanálu se pak vždy nachází pouze zprávy, které patří k&nbsp;jednomu podtématu vybraného tématu. Mezi podtématy lze přepínat pomocí tlačítek nebo výběrového seznamu.
 
 !!! caution "Upozornění: Mechanismus odesílání/mazání zpráv a jeho rychlost"
-    Při přepínání mezi podtématy jsou nejprve do kanálu odeslány zprávy nového podtématu a následně jsou smazány zprávy starého podtématu. Při tomto procesu (který může chvilku trvat) nebudou ovládací prvky reagovat. Pokud je zpráv více, může se proces na chvíli zastavit. Jedná se o&nbsp;omezení ze strany Discordu.
+    Při přepínání mezi podtématy jsou nejprve do kanálu odeslány zprávy nového podtématu a následně jsou smazány zprávy starého podtématu. Při tomto procesu, který může chvilku trvat, nebudou ovládací prvky reagovat. Pokud je zpráv více, může se proces na chvíli zastavit. Jedná se o&nbsp;omezení ze strany Discordu.
 
 !!! tip "Tip: Výklad teorie v&nbsp;přímých zprávách"
     Používání výkladu teorie v&nbsp;textovém kanálu, kde komunikují nebo používají bota i jiní uživatelé, může být nepřehledné až chaotické. Zprávy odeslané botem se mohou zamíchat s&nbsp;cizími zprávami a teoretické výpisky pak nebudou dobře čitelné.
 
     Proto je výklad teorie vhodné používat v&nbsp;kanálech s&nbsp;omezeným přístupem nebo v&nbsp;DMs. Pro zahájení konverzace v&nbsp;DMs slouží příkaz `/dm`.
+
+---
 
 ## Rozhraní příkazu `/explain`
 

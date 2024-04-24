@@ -4,9 +4,9 @@ Nacházíte se na stránkách manuálu pro Discord bota LingeBot.
 
 ## Jak jsme na tom?
 
-* `[~]` Důležité pojmy
-* `[X]` Jak začít
-* `[75 %]` Dostupné funkce a jak je používat
-* `[ ]` Provoz vlastní instance
-* `[ ]` Přidání vlastního obsahu
-* `[ ]` Obsah manuálu (tato stránka)
+* `[99 %]` Důležité pojmy
+* `[99 %]` Jak začít
+* `[99 %]` Dostupné funkce a jak je používat
+* `[ 0 %]` Provoz vlastní instance
+* `[ 0 %]` Přidání vlastního obsahu
+* `[ 0 %]` Obsah manuálu (tato stránka)

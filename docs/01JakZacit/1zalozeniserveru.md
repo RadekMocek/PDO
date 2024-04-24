@@ -1,29 +1,29 @@
 # Vytvoření serveru a jeho uživatelské rozhraní
 
-## Jak vytvořit server
+## Jak si vytvořit vlastní Discord server
 
-Tato sekce popisuje, jak si vytvořit vlastní Discord server.
-
-__1.__ Klikněte na _Přidat server_.
+__1.__ Klikněte na tlačítko _Přidat server_.
 
 ![h](../img/010201.png)
 
 __2.__ Proklikejte se průvodcem vytvoření serveru:<br>
-__2A.__ Klikněte na _Vytvořit vlastní_
+__2A.__ Klikněte na tlačítko _Vytvořit vlastní_.
 
 ![h](../img/010202a.png)
 
-__2B.__ Klikněte na _tuto otázku přeskočit_
+__2B.__ Klikněte na _tuto otázku přeskočit_.
 
 ![h](../img/010202b.png)
 
-__2C.__ V&nbsp;kolonce _NÁZEV SERVERU_ můžete změnit název svého serveru. Potvrďte kliknutím na _Vytvořit_.
+__2C.__ V&nbsp;kolonce _NÁZEV SERVERU_ můžete změnit název svého serveru. Potvrďte kliknutím na tlačítko _Vytvořit_.
 
 ![h](../img/010202c.png)
 
-__3.__ Server byl vytvořen. Klikněte na _Zobrazit seznam členů_.
+__3.__ Server byl vytvořen. Klikněte na tlačítko _Zobrazit seznam členů_.
 
 ![h](../img/010203.png)
+
+---
 
 ## Uživatelské rozhraní serveru
 

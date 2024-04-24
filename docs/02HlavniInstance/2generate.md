@@ -2,7 +2,7 @@
 
 ## Princip příkazu `/generate`
 
-Po zadání příkazu `/generate` se v&nbsp;textovém kanálu objeví rozhraní pro generování příkladů. Nejprve se objeví výběrový seznam dostupných kategorií příkladů. Uživatel si vybere kategorii, která ho zajímá. Po zvolení kategorie si uživatel pomocí tlačítek může buď nechat vygenerovat první příklad, nebo zobrazit návod pro výpočet příkladů z&nbsp;dané kategorie.
+Po odeslání příkazu `/generate` se v&nbsp;textovém kanálu objeví rozhraní pro generování příkladů. Nejprve se objeví výběrový seznam dostupných kategorií příkladů. Uživatel si vybere kategorii, která ho zajímá. Po zvolení kategorie si uživatel pomocí tlačítek může buď nechat vygenerovat první příklad, nebo zobrazit návod pro výpočet příkladů z&nbsp;dané kategorie.
 
 Po vygenerování příkladu je zpráva upravena a obsahuje textové zadání příkladu s&nbsp;případným obrázkem. Uživatel může pomocí tlačítek zobrazit výsledek nebo vygenerovat nový příklad.
 
@@ -10,9 +10,11 @@ Návod pro vypočítání příkladu funguje na stejném principu jako výklad t
 
 Pokud pro danou kategorii příkladů není návod dostupný, tlačítko pro jeho zobrazení nebude dostupné. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.
 
+---
+
 ## Rozhraní příkazu `/generate`
 
-Výběr kateogie příkladů z&nbsp;výběrového seznamu:<br>
+Výběr kategorie příkladů z&nbsp;výběrového seznamu:<br>
 ![g](../img/020301.gif)
 
 Po výběru kategorie se rozhraní přepne do _stavu A_:<br>
