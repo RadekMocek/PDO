@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/01JakZacit/2pozvanibota/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Přidání bota na server, zadávání příkazů - LingeBot manuál</title>
+    <title>Přidání bota na server<br>a odesílání příkazů - LingeBot manuál</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "P\u0159id\u00e1n\u00ed bota na server, zad\u00e1v\u00e1n\u00ed p\u0159\u00edkaz\u016f";
+        var mkdocs_page_name = "P\u0159id\u00e1n\u00ed bota na server\u003cbr\u003ea odes\u00edl\u00e1n\u00ed p\u0159\u00edkaz\u016f";
         var mkdocs_page_input_path = "01JakZacit\\2pozvanibota.md";
         var mkdocs_page_url = "/PDO/01JakZacit/2pozvanibota/";
       </script>
@@ -55,9 +55,9 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../0zalozeniuctu/">Založení uživatelského účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../1zalozeniserveru/">Vytvoření serveru<br>a jeho uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Přidání bota na server, zadávání příkazů</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Přidání bota na server<br>a odesílání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
@@ -83,7 +83,7 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -112,7 +112,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Jak začít</li>
-      <li class="breadcrumb-item active">Přidání bota na server, zadávání příkazů</li>
+      <li class="breadcrumb-item active">Přidání bota na server<br>a odesílání příkazů</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -122,18 +122,18 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="pridani-bota-na-server-a-overeni-jeho-dostupnosti-prikazem-ping">Přidání bota na server a oveření jeho dostupnosti příkazem <code>/ping</code></h1>
-<h2 id="jak-na-svuj-server-pridat-lingebota">Jak na svůj server přidat LingeBota</h2>
-<p>Tato sekce popisuje, jak na svůj server přidat hlavní instanci LingeBota.</p>
+<h2 id="jak-na-svuj-server-pridat-hlavni-instanci-lingebota">Jak na svůj server přidat hlavní instanci LingeBota</h2>
 <p><strong>1.</strong> V&nbsp;prohlížeči, ve kterém jste přihlášeni do webové aplikace Discord, otevřete tento zvací odkaz:
 <a href="https://discord.com/oauth2/authorize?client_id=1160906076179415070&amp;permissions=2416045056&amp;scope=bot+applications.commands">https://discord.com/oauth2/authorize<br>?client_id=1160906076179415070<br>&amp;permissions=2416045056<br>&amp;scope=bot+applications.commands</a></p>
 <p><strong>2.</strong> Ve výběrovém seznamu zvolte server, na který chcete bota přidat. Potvrďte tlačítkem <em>Pokračovat</em> a v&nbsp;následujícím okně tlačítkem <em>Autorizovat</em>.</p>
 <p><img alt="h" src="../../img/010301.png" /></p>
-<p><strong>3.</strong> LingeBot je nyní členem vybraného serveru.</p>
+<p><strong>3.</strong> LingeBot je nyní členem vybraného serveru. V hlavním textovém kanálu tohoto serveru se objeví oznámení o připojení LingeBota.</p>
 <p><img alt="h" src="../../img/010302.png" /></p>
-<h2 id="jak-zadavat-prikazy-a-jak-overit-dostupnost-lingebota">Jak zadávat příkazy a jak ověřit dostupnost LingeBota</h2>
+<hr />
+<h2 id="jak-odesilat-prikazy-a-overit-dostupnost-lingebota">Jak odesílat příkazy a ověřit dostupnost LingeBota</h2>
 <p><strong>1.</strong> Napište do kolonky pro zadávání zpráv a příkazů řetězec <code>/ping</code>.</p>
 <p><img alt="h" src="../../img/010303.png" /></p>
-<p>Discord během psaní začne našeptávat odpovídající příkazy. Po dopsání celého řetězce už zbyde jen příkaz <code>/ping</code>. Pokud se na serveru nachází více botů se stejně pojmenovaným příkazem, zobrazí se zde všechny. Nejvíce relevantní příkaz v&nbsp;seznamu našeptávače je zvýrazněn a tedy vybrán. Pro vybrání jiného lze využít šipek na klávesnici. Výběr je potvrzen stiskem klávesy enter.</p>
+<p>Discord během psaní začne našeptávat odpovídající příkazy. Po dopsání celého řetězce už zbyde jen příkaz <code>/ping</code>. Pokud se na serveru nachází více botů se stejně pojmenovaným příkazem, zobrazí se zde všechny. Nejvíce relevantní příkaz v&nbsp;seznamu našeptávače je zvýrazněn a tedy vybrán. Pro vybrání jiného lze využít šipek na klávesnici. Výběr je potvrzen stiskem klávesy enter. Alternativně lze příkaz vybrat kliknutím myši.</p>
 <p><strong>2.</strong> Stiskněte klávesu enter pro potvrzení výběru příkazu <code>/ping</code>, druhým stiskem klávesy enter příkaz odešlete.</p>
 <p><img alt="h" src="../../img/010304.png" /></p>
 <p><strong>3.</strong> Pokud je bot funkční, odpoví zprávou se základními informacemi o&nbsp;provozu.</p>
@@ -142,7 +142,7 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1zalozeniserveru/" class="btn btn-neutral float-left" title="Vytvoření serveru a uživatelské rozhraní"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1zalozeniserveru/" class="btn btn-neutral float-left" title="Vytvoření serveru<br>a jeho uživatelské rozhraní"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../../02HlavniInstance/0dostupneprikazy/" class="btn btn-neutral float-right" title="Seznam dostupných příkazů">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 

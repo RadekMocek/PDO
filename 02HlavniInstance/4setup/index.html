@@ -55,9 +55,9 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/0zalozeniuctu/">Založení uživatelského účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru<br>a jeho uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server, zadávání příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server<br>a odesílání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
@@ -83,7 +83,7 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -122,15 +122,140 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="nastaveni-bota">Nastavení bota</h1>
-<h2 id="nastaveni-opravneni-prikazy-setup-permissions">Nastavení oprávnění příkazy <code>/setup permissions</code></h2>
-<h2 id="pridelovani-role-lingemod-prikazem-setup-lingemod-member">Přidělování role LingeMod příkazem <code>/setup lingemod</code> <code>&lt;member&gt;</code></h2>
-<h2 id="zmena-barevneho-schematu-vykreslovanych-matematickych-vyrazu-prikazem-setup-render_theme-theme">Změna barevného schématu vykreslovaných matematických výrazů příkazem <code>/setup render_theme</code> <code>&lt;theme&gt;</code></h2>
+<p>Tato sekce popisuje všechny příkazy začínající na <code>/setup</code>.</p>
+<hr />
+<h2 id="nastaveni-opravneni">Nastavení oprávnění<!-- příkazy <code>/setup permissions</code>--></h2>
+<p>LingeBot umožňuje administrátorům serveru, aby ostatním členům nastavili oprávnění pro používání jednotlivých příkazů a oprávnění pro interakci s&nbsp;jejich rozhraním.</p>
+<h3 id="zmena-opravneni-pro-pouziti-prikazu">Změna oprávnění pro použití příkazů</h3>
+<p>U oprávnění pro použití příkazu jsou na serveru rozlišovány tři množiny členů:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Množina</th>
+<th>Do množiny patří...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td><strong><em>Admin Only</em></strong></td>
+<td>... pouze administrátoři.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong><em>Admin+LingeMod Only</em></strong></td>
+<td>... pouze administrátoři a členové s&nbsp;rolí LingeMod.</td>
+</tr>
+<tr>
+<td>0</td>
+<td><strong><em>Anyone</em></strong></td>
+<td>... všichni členové serveru.</td>
+</tr>
+</tbody>
+</table>
+<p>Oprávnění lze nastavit pro tyto akce:</p>
+<table>
+<thead>
+<tr>
+<th>Akce</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><em>clear</em></strong></td>
+<td>příkaz <code>/clear</code></td>
+</tr>
+<tr>
+<td><strong><em>explain</em></strong></td>
+<td>příkaz <code>/explain</code></td>
+</tr>
+<tr>
+<td><strong><em>generate</em></strong></td>
+<td>příkaz <code>/generate</code></td>
+</tr>
+<tr>
+<td><strong><em>render</em></strong></td>
+<td>příkaz <code>/render</code> <code>&lt;text&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ve výchozím nastavení je ke všem akcím přiřazena množina <em>Anyone</em> – kdokoliv může používat jakýkoliv příkaz.</p>
+<p>Příkaz <code>/setup permissions set_command</code> <code>&lt;action&gt;</code> <code>&lt;permission&gt;</code> umožňuje u&nbsp;vybrané akce změnit její přiřazenou množinu. Do argumentu <code>&lt;action&gt;</code> je zadána akce a do argumentu <code>&lt;permission&gt;</code> je zadána množina.</p>
+<p>Např.: <code>/setup permissions set_command</code> <code>explain</code> <code>Admin+LingeMod Only</code> znamená, že pouze členové s&nbsp;rolí LingeMod a administrátoři mohou používat příkaz <code>/explain</code>.</p>
+<h3 id="zmena-opravneni-pro-interakci-s-rozhranim">Změna oprávnění pro interakci s&nbsp;rozhraním</h3>
+<p>Interakce s&nbsp;rozhraním znamená kliknutí na tlačítko nebo zvolení položky ve výběrovém seznamu u&nbsp;výkladu teorie, generátoru příkladů nebo vykreslení matematického výrazu. Ve výchozím nastavení může s&nbsp;těmito prvky interagovat pouze <em>autor dané interakce</em>. Jedná se o&nbsp;uživatele, který použil příkaz, na nějž daná zpráva s&nbsp;interaktivními prvky odpovídá. Oprávnění pro interakce lze ale přidat i administrátorům a členům s&nbsp;rolí LingeMod:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Množina</th>
+<th>Do množiny patří...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td><strong><em>Author Only</em></strong></td>
+<td>... pouze autor dané interakce.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong><em>Any Admin</em></strong></td>
+<td>... pouze autor dané interakce a všichni administrátoři.</td>
+</tr>
+<tr>
+<td>0</td>
+<td><strong><em>Any Admin+LingeMod</em></strong></td>
+<td>... pouze autor dané interakce, všichni administrátoři<br>&nbsp;&nbsp;&nbsp; a všichni členové s&nbsp;rolí LingeMod.</td>
+</tr>
+</tbody>
+</table>
+<p>Oprávnění lze nastavit pro tyto akce:</p>
+<table>
+<thead>
+<tr>
+<th>Akce</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><em>explain_btns</em></strong></td>
+<td>interakce s&nbsp;rozhraním příkazu <code>/explain</code></td>
+</tr>
+<tr>
+<td><strong><em>generate_btns</em></strong></td>
+<td>interakce s&nbsp;rozhraním příkazu <code>/generate</code></td>
+</tr>
+<tr>
+<td><strong><em>render_btns</em></strong></td>
+<td>interakce s&nbsp;rozhraním příkazu <code>/render</code> <code>&lt;text&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Příkaz <code>/setup permissions set_buttons</code> <code>&lt;action&gt;</code> <code>&lt;permission&gt;</code> umožňuje u&nbsp;vybrané akce změnit její přiřazenou množinu. Do argumentu <code>&lt;action&gt;</code> je zadána akce a do argumentu <code>&lt;permission&gt;</code> je zadána množina.</p>
+<p>Např.: <code>/setup permissions set_buttons</code> <code>render_btns</code> <code>Any Admin</code> znamená, že administrátoři mohou potvrzovat, upravovat a mazat vykreslené matematické výrazy ostatním členům serveru.</p>
+<h3 id="zjisteni-aktualne-nastavenych-opravneni">Zjištění aktuálně nastavených oprávnění<!-- příkazem <code>/setup permissions get</code>--></h3>
+<p>Po odeslání příkazu <code>/setup permissions get</code> je administrátorovi zobrazen přehled nastavení oprávnění na daném serveru.</p>
+<hr />
+<h2 id="pridelovani-role-lingemod">Přidělování role LingeMod<!-- příkazem <code>/setup lingemod</code> <code>&lt;member&gt;</code>--></h2>
+<p>Po odeslání příkazu <code>/setup lingemod</code> <code>&lt;member&gt;</code> je členovi <code>&lt;member&gt;</code> přidána/odebrána role LingeMod.
+Pokud člen tuto roli nemá, pak je mu přidána. Pokud ji má, pak je mu odebrána.</p>
+<p>Pokud je role LingeMod ze serveru smazána, přestane kontrola oprávnění korektně fungovat. Pro opravu nestačí znovu vytvořit roli se stejným názvem. Roli LingeMod musí vytvořit bot samotný. Pro tyto účely byl přidán prefixový příkaz <code>$&gt; lingemod_reset</code>, po jehož odeslání je role znovu vytvořena. Nová role nebude po vytvoření přiřazena k&nbsp;žádným členům.</p>
+<hr />
+<h2 id="zmena-barevneho-schematu-vykreslovanych-matematickych-vyrazu">Změna barevného schématu vykreslovaných matematických výrazů<!-- příkazem <code>/setup render_theme</code> <code>&lt;theme&gt;</code>--></h2>
+<p>Po odeslání příkazu <code>/setup render_theme</code> <code>&lt;theme&gt;</code> se pro vykreslování matematických výrazů nastaví barevné schéma <code>&lt;theme&gt;</code>.</p>
+<p>Na serveru toto platí pro všechna vykreslení, která se na něm po odeslání tohoto příkazu odehrají, a nezáleží na tom, kdo použije vykreslovací příkaz. V&nbsp;DMs toto platí pro všechna budoucí vykreslení v&nbsp;DMs včetně těch, které jsou přeposlány ze serveru, kde mohou být vykresleny s&nbsp;jiným schématem.</p>
+<h3 id="dostupna-barevna-schemata-pro-vykreslovani-matematickych-vyrazu">Dostupná barevná schémata pro vykreslování matematických výrazů</h3>
+<p><img alt="h" src="../../img/020501.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../3render/" class="btn btn-neutral float-left" title="/render – Vykreslování matematiky"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../03ProvozVlastniInstance/4docker/" class="btn btn-neutral float-right" title="Spuštění v prostředí Docker">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../03ProvozVlastniInstance/4docker/" class="btn btn-neutral float-right" title="Spuštění v&nbsp;prostředí Docker">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>

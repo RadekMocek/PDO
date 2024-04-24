@@ -55,9 +55,9 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/0zalozeniuctu/">Založení uživatelského účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru<br>a jeho uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server, zadávání příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server<br>a odesílání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
@@ -83,7 +83,7 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -123,17 +123,18 @@
               
                 <h1 id="vyklad-teorie">Výklad teorie</h1>
 <h2 id="princip-prikazu-explain">Princip příkazu <code>/explain</code></h2>
-<p>Po zadání příkazu <code>/explain</code> se v&nbsp;textovém kanálu objeví rozhraní pro výklad teorie. Výklad funguje tak, že bot do textového kanálu odesílá zprávy, které obsahují výpisky z&nbsp;konkrétního matematického tématu. Tyto výpisky jsou vytvořeny provozovatelem bota.</p>
-<p>Teoretické materiály se dělí na témata, která se pak dělí na podtémata. Po zadání příkazu <code>/explain</code> se nejprve objeví výběrový seznam, kde si uživatel zvolí jedno téma, které ho zajímá. V&nbsp;textovém kanálu se pak vždy nachází pouze zprávy, které patří k&nbsp;jednomu podtématu vybraného tématu. Mezi podtématy lze přepínat pomocí tlačítek nebo výběrového seznamu.</p>
+<p>Po odeslání příkazu <code>/explain</code> se v&nbsp;textovém kanálu objeví rozhraní pro výklad teorie. Výklad funguje tak, že bot do textového kanálu odesílá zprávy, které obsahují výpisky z&nbsp;uživatelem zvoleného matematického tématu. Tyto výpisky jsou vytvořeny provozovatelem bota.</p>
+<p>Teoretické materiály se dělí na témata, která se pak dělí na podtémata. Po odeslání příkazu <code>/explain</code> se nejprve objeví výběrový seznam, kde si uživatel zvolí jedno téma, které ho zajímá. V&nbsp;textovém kanálu se pak vždy nachází pouze zprávy, které patří k&nbsp;jednomu podtématu vybraného tématu. Mezi podtématy lze přepínat pomocí tlačítek nebo výběrového seznamu.</p>
 <div class="admonition caution">
 <p class="admonition-title">Upozornění: Mechanismus odesílání/mazání zpráv a jeho rychlost</p>
-<p>Při přepínání mezi podtématy jsou nejprve do kanálu odeslány zprávy nového podtématu a následně jsou smazány zprávy starého podtématu. Při tomto procesu (který může chvilku trvat) nebudou ovládací prvky reagovat. Pokud je zpráv více, může se proces na chvíli zastavit. Jedná se o&nbsp;omezení ze strany Discordu.</p>
+<p>Při přepínání mezi podtématy jsou nejprve do kanálu odeslány zprávy nového podtématu a následně jsou smazány zprávy starého podtématu. Při tomto procesu, který může chvilku trvat, nebudou ovládací prvky reagovat. Pokud je zpráv více, může se proces na chvíli zastavit. Jedná se o&nbsp;omezení ze strany Discordu.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip: Výklad teorie v&nbsp;přímých zprávách</p>
 <p>Používání výkladu teorie v&nbsp;textovém kanálu, kde komunikují nebo používají bota i jiní uživatelé, může být nepřehledné až chaotické. Zprávy odeslané botem se mohou zamíchat s&nbsp;cizími zprávami a teoretické výpisky pak nebudou dobře čitelné.</p>
 <p>Proto je výklad teorie vhodné používat v&nbsp;kanálech s&nbsp;omezeným přístupem nebo v&nbsp;DMs. Pro zahájení konverzace v&nbsp;DMs slouží příkaz <code>/dm</code>.</p>
 </div>
+<hr />
 <h2 id="rozhrani-prikazu-explain">Rozhraní příkazu <code>/explain</code></h2>
 <p>Výběr tématu z&nbsp;výběrového seznamu:<br>
 <img alt="g" src="../../img/020201.gif" /></p>

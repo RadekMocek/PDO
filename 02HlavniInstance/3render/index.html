@@ -55,9 +55,9 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/0zalozeniuctu/">Založení uživatelského účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru<br>a jeho uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server, zadávání příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server<br>a odesílání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
@@ -83,7 +83,7 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -124,6 +124,7 @@
                 <h1 id="vykreslovani-matematickych-vyrazu">Vykreslování matematických výrazů</h1>
 <h2 id="princip-prikazu-render-text">Princip příkazu <code>/render</code> <code>&lt;text&gt;</code></h2>
 <p>Příkaz <code>/render</code> odešle do textového kanálu obrázek s&nbsp;vykresleným matematickým výrazem. Matematický výraz je vykreslen podle parametru <code>&lt;text&gt;</code>, který je zadán ve speciálním formátu.</p>
+<hr />
 <h2 id="rozhrani-prikazu-render-text">Rozhraní příkazu <code>/render</code> <code>&lt;text&gt;</code></h2>
 <p>Vykreslení výrazu a jeho následná úprava:<br>
 <img alt="g" src="../../img/020401.gif" /></p>
@@ -150,6 +151,7 @@
 </tbody>
 </table>
 <p>Tlačítka ze zprávy zmizí automaticky po 30 sekundách, aby zbytečně neznepřehledňovala konverzaci.</p>
+<hr />
 <h2 id="pravidla-pro-zapis-matematickych-vyrazu">Pravidla pro zápis matematických výrazů</h2>
 <p>Pro zápis matematických výrazů se používá Matplotlib Mathtext. Jedná se o&nbsp;podmnožinu jazyka TeX. Seznam všech podporovaných symbolů se nachází v&nbsp;<a href="https://matplotlib.org/stable/users/explain/text/mathtext.html#symbols" target="_blank">dokumentaci balíku Matplotlib</a>. Matplotlib Mathtext nepodporuje TeX prostředí typu <code>\begin{}\end{}</code>, do LingeBota byla ale přidána možnost vykreslovat matice a víceřádkové rovnice.</p>
 <h3 id="zapis-matic">Zápis matic</h3>
@@ -163,7 +165,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>[1, 2; 3, 4]</code></td>
+<td><code>/render</code> <code>[1, 2; 3, 4]</code></td>
 <td><img alt="s" src="../../img/svg/tj5XvNSd5E.svg" /></td>
 </tr>
 <tr>
@@ -171,7 +173,7 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><code>[\cos{\alpha}, -\sin{\alpha}; \sin{\alpha}, \cos{\alpha}]</code></td>
+<td><code>/render</code> <code>[\cos{\alpha}, -\sin{\alpha}; \sin{\alpha}, \cos{\alpha}]</code></td>
 <td><img alt="s" src="../../img/svg/xT1wZ7NQk5.svg" /></td>
 </tr>
 <tr>
@@ -179,7 +181,7 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><code>A = [1, 2; 3, 4] \cdot [5, 6; 7, 8]</code></td>
+<td><code>/render</code> <code>A = [1, 2; 3, 4] \cdot [5, 6; 7, 8]</code></td>
 <td><img alt="s" src="../../img/svg/v4SLctegJw.svg" /></td>
 </tr>
 <tr>
@@ -187,7 +189,7 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><code>B = \sqrt{[1, 2; 3, 4]}</code></td>
+<td><code>/render</code> <code>B = \sqrt{[1, 2; 3, 4]}</code></td>
 <td>Nelze vykreslit</td>
 </tr>
 </tbody>
@@ -204,7 +206,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>x&amp;=5\\x+y&amp;=6\\C&amp;=[y,2;3,4]</code></td>
+<td><code>/render</code> <code>x&amp;=5\\x+y&amp;=6\\C&amp;=[y,2;3,4]</code></td>
 <td><img alt="s" src="../../img/svg/aeg9W2l0Ey.svg" /></td>
 </tr>
 </tbody>

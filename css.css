@@ -4,3 +4,8 @@ blockquote {
     padding: 0.5rem;
     margin-left: 0 !important;
 }
+
+code {
+    color: black !important;
+    background-color: floralwhite !important;
+}

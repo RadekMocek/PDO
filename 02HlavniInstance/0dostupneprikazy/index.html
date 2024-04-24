@@ -55,9 +55,9 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/0zalozeniuctu/">Založení uživatelského účtu</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru a uživatelské rozhraní</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/1zalozeniserveru/">Vytvoření serveru<br>a jeho uživatelské rozhraní</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server, zadávání příkazů</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01JakZacit/2pozvanibota/">Přidání bota na server<br>a odesílání příkazů</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Dostupné funkce a jak je používat</span></p>
@@ -83,7 +83,7 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="../../03ProvozVlastniInstance/h.md">Seznam příkazů pro provozovatele</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/4docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -165,16 +165,28 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="prikazy-pro-nastaveni">Příkazy pro nastavení</h2>
 <p><code>/setup lingemod</code> <code>&lt;member&gt;</code><br>Přidá, nebo odebere roli LingeMod členovi <code>&lt;member&gt;</code>.</p>
 <p><code>/setup permissions get</code><br>Zobrazí přehled nastavení oprávnění na daném serveru.</p>
-<p><code>/setup permissions set_buttons</code> <code>&lt;action&gt;</code> <code>&lt;permission&gt;</code><br>Nastaví oprávnění <code>&lt;permission&gt;</code> pro interakci s&nbsp;tlačítky <code>&lt;action&gt;</code>.</p>
+<p><code>/setup permissions set_buttons</code> <code>&lt;action&gt;</code> <code>&lt;permission&gt;</code><br>Nastaví oprávnění <code>&lt;permission&gt;</code> pro interakci s&nbsp;rozhraním <code>&lt;action&gt;</code>.</p>
 <p><code>/setup permissions set_command</code> <code>&lt;action&gt;</code> <code>&lt;permission&gt;</code><br>Nastaví oprávnění <code>&lt;permission&gt;</code> pro použití příkazu <code>&lt;action&gt;</code>.</p>
 <p><code>/setup render_theme</code> <code>&lt;theme&gt;</code><br>Nastaví barevné schéma <code>&lt;theme&gt;</code> pro vykreslování matematických výrazů.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka: Nastavení v&nbsp;DMs</p>
+<p>Příkazy pro nastavení fungují pouze na serveru a v&nbsp;DMs nemají význam. Výjimkou je nastavení barevného schématu příkazem <code>/setup render_theme</code> <code>&lt;theme&gt;</code>. Na serveru tento příkaz nastaví schéma pro všechny vykreslené výrazy nehledě na uživatele příkazu. V&nbsp;DMs pak tento příkaz nastaví schéma pro všechny přímé zprávy včetně těch přeposlaných ze serveru.</p>
+</div>
+<!--
+!!! note "[!] NEPRAVDA"
+    Příkazy pro nastavení mohou používat pouze administrátoři a zakladatel serveru, ostatním členům je přístup zamítnut. Výjimkou je příkaz `/setup permissions get`, který ve skutečnosti nic nenastavuje, ale pouze zobrazuje aktuální nastavení.
+
+    Při použití `/setup render_theme` `<theme>` v&nbsp;DMs (jak je zmíněno výše), není vyžadováno, aby byl uživatel administrátorem. V&nbsp;kontextu DMs totiž žádný administrátor neexistuje a uživatel nastavuje barevné schéma pouze pro soukromou komunikaci s&nbsp;botem.
+-->
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../01JakZacit/2pozvanibota/" class="btn btn-neutral float-left" title="Přidání bota na server, zadávání příkazů"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../01JakZacit/2pozvanibota/" class="btn btn-neutral float-left" title="Přidání bota na server<br>a odesílání příkazů"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../1explain/" class="btn btn-neutral float-right" title="/explain – Výklad teorie">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
