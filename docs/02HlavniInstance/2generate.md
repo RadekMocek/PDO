@@ -8,7 +8,7 @@ Po vygenerování příkladu je zpráva upravena a obsahuje textové zadání p�
 
 Návod pro vypočítání příkladu funguje na stejném principu jako výklad teorie. Zprávy s&nbsp;návodem jsou postupně odeslány do textového kanálu.
 
-Pokud pro danou kategorii příkladů není návod dostupný, tlačítko pro jeho zobrazení nebude dostupné. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.
+Pokud pro danou kategorii příkladů není návod dostupný, pak bude tlačítko pro jeho zobrazení vypnuté. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.
 
 ---
 

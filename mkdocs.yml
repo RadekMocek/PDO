@@ -4,7 +4,7 @@ theme:
   name: readthedocs
   prev_next_buttons_location: bottom
   sticky_navigation: false
-  titles_only: true
+  titles_only: false
 
 markdown_extensions:
   - mdx_truly_sane_lists
@@ -36,5 +36,5 @@ nav:
   - Přidání vlastního obsahu:
     - Struktura projektu: 04VlastniObsah/0popisprojektu.md
     - Pravidla pro zápis Markdown souborů: 04VlastniObsah/1markdownpravidla.md
-    - Vlastní téma pro výklad teorie: 04VlastniObsah/2vlastniteorie.md
+    - Vlastní témata pro výklad teorie: 04VlastniObsah/2vlastniteorie.md
     - Vlastní kategorie příkladů: 04VlastniObsah/3vlastnipriklady.md

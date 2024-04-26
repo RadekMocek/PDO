@@ -5,7 +5,7 @@ Tato sekce popisuje, jak spustit LingeBota v&nbsp;prostředí Docker. Tento post
 !!! caution "Upozornění: Vhodnost nasazení v&nbsp;prostředí Docker"
     Nasazení v&nbsp;prostředí Docker zlepší přenosnost řešení, ale zkomplikuje případné přidávání nového obsahu.<br><br>
     Použití Dockeru je vhodné pro dlouhodobé provozování bota, jehož obsah nechcete měnit.<br><br>
-    Použití Dockeru není vhodné, pokud chcete pravidelně měnit např. teoretické materiály.
+    Použití Dockeru (podle tohoto základního postupu) není vhodné, pokud chcete pravidelně měnit např. teoretické materiály.
 
 __0.__ Přejděte do adresáře `BP/Bot/`, pokud se zde již nenacházíte.
 
