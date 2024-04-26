@@ -10,6 +10,16 @@ code {
     background-color: floralwhite !important;
 }
 
+.spoiler {
+    background-color: gray;
+    color: transparent;
+    user-select: none;
+}
+.spoiler:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
 .icon-home {
     padding: 0 !important;
     /*margin: 0 !important;*/
@@ -17,4 +27,7 @@ code {
 
 .rst-versions {
     display: none;
+}
+.wy-nav-side {
+    padding: 0;
 }

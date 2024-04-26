@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://RadekMocek.github.io/PDO/04VlastniObsah/2vlastniteorie/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Vlastní téma pro výklad teorie - LingeBot manuál</title>
+    <title>Vlastní témata pro výklad teorie - LingeBot manuál</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Vlastn\u00ed t\u00e9ma pro v\u00fdklad teorie";
+        var mkdocs_page_name = "Vlastn\u00ed t\u00e9mata pro v\u00fdklad teorie";
         var mkdocs_page_input_path = "04VlastniObsah\\2vlastniteorie.md";
         var mkdocs_page_url = "/PDO/04VlastniObsah/2vlastniteorie/";
       </script>
@@ -79,7 +79,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/2slashsync/">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -88,7 +88,9 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1markdownpravidla/">Pravidla pro zápis Markdown souborů</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Vlastní téma pro výklad teorie</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Vlastní témata pro výklad teorie</a>
+    <ul class="current">
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../3vlastnipriklady/">Vlastní kategorie příkladů</a>
                   </li>
@@ -108,7 +110,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Přidání vlastního obsahu</li>
-      <li class="breadcrumb-item active">Vlastní téma pro výklad teorie</li>
+      <li class="breadcrumb-item active">Vlastní témata pro výklad teorie</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -117,7 +119,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="vlastni-temata-pro-vyklad-teorie">Vlastní témata pro výklad teorie</h1>
+<p>Tato sekce popisuje, jak do vlastní instance LingeBota přidat vlastní materiály pro <a href="../../02HlavniInstance/1explain/">výklad teorie</a>.</p>
+<p>Výklad teorie probíhá pomocí postupného odesílání zpráv do textového kanálu. Text zpráv je čerpán z&nbsp;Markdown souborů, které se nachází v&nbsp;podadresáři <code>_static/theory</code>. Každý soubor v&nbsp;tomto podadresáři, který má koncovku <code>.MD</code> (velkými písmeny), představuje jedno teoretické téma. Název položky ve výběrovém seznamu odpovídá názvu příslušného souboru:</p>
+<p><img alt="h" src="../../img/040301.png" /></p>
+<p>Změny provedené v&nbsp;Markdown souborech se projeví při dalším použití příkazu <code>/explain</code>, není tedy nutné bota restartovat.</p>
+<p>Na prvním řádku každého souboru pro výklad teorie by měl být nadpis první úrovně (hlavní nadpis). Následují nadpisy druhé úrovně, které soubor dělí na jednotlivá podtémata. Všechen text, který následuje za nadpisem druhé úrovně, je součástí příslušného podtématu, dokud se neobjeví další nadpis druhé úrovně. Každý soubor musí mít minimálně jeden nadpis druhé úrovně. Mezi hlavní nadpis a první nadpis druhé úrovně lze vložit text, který je pak společně s&nbsp;hlavním nadpisem přítomen při zobrazení všech podtémat daného tématu.</p>
+<p><strong><em>Např.:</em></strong></p>
+<pre><code class="language-md"># Téma
+
+Tento text je vidět vždy.
+
+## První podtéma
+
+Toto je text prvního podtématu.
+
+## Druhé podtéma
+
+Jak zapsat x na druhou?
+
+### Pomocí render
+
+$$$render
+x^2
+$$
+
+### Pomocí sup
+
+_x_&lt;sup&gt;2&lt;/sup&gt;
+</code></pre>
+<p><strong><em>se zobrazí jako:</em></strong></p>
+<p><img alt="h" src="../../img/040302.png" /></p>
               
             </div>
           </div><footer>

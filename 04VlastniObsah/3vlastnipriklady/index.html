@@ -79,7 +79,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/2slashsync/">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -88,9 +88,23 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1markdownpravidla/">Pravidla pro zápis Markdown souborů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../2vlastniteorie/">Vlastní téma pro výklad teorie</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2vlastniteorie/">Vlastní témata pro výklad teorie</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Vlastní kategorie příkladů</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-vytvoreni-modulu">[1] Vytvoření modulu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-zaregistrovani-modulu">[2] Zaregistrování modulu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-definice-logiky-generace-prikladu">[3] Definice logiky generace příkladů</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vykresleni-matematickych-vyrazu-v-rozhrani-generatoru-prikladu">Vykreslení matematických výrazů v&nbsp;rozhraní generátoru příkladů</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pridani-tutorialu-pro-vypocet-prikladu">Přidání tutoriálu pro výpočet příkladů</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pridani-kategorie-prikladu-pouze-s-tutorialem-bez-moznosti-generace">Přidání kategorie příkladů pouze s&nbsp;tutoriálem bez možnosti generace</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -117,12 +131,107 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="vlastni-kategorie-prikladu">Vlastní kategorie příkladů</h1>
+<p>Tato sekce popisuje, jak do vlastní instance LingeBota přidat vlastní kategorie pro <a href="../../02HlavniInstance/2generate/">generaci příkladů</a>. Vyžaduje se znalost programovacího jazyka Python.</p>
+<p>Každá kategorie příkladů odpovídá jednomu modulu v&nbsp;balíku <code>problems</code> (kromě modulu <code>__init__.py</code>), který se nachází v&nbsp;podadresáři <code>utils/problem_utils/</code>:</p>
+<p><img alt="h" src="../../img/040401.png" /></p>
+<p>Obsah modulů musí splňovat určitá pravidla a pro přidání kategorie do bota je ještě potřeba několik dalších kroků. Proto bude postup ukázán na jednoduchém příkladu, kdy je přidána kategorie pro malou násobilku:</p>
+<hr />
+<h2 id="1-vytvoreni-modulu">[1] Vytvoření modulu</h2>
+<p><strong>1.1.</strong> Vytvořte v&nbsp;balíku <code>problems</code> nový Python modul <code>basic_multiplication.py</code>. Jméno souboru nemá vliv na výsledný název kategorie.</p>
+<p><img alt="h" src="../../img/040402.png" /></p>
+<p><strong>1.2.</strong> V&nbsp;modulu naimportujte třídu <code>GeneralProblem</code> a definujte třídu <code>Problem</code>, která ze třídy <code>GeneralProblem</code> dědí.</p>
+<p><strong>1.3.</strong> Ve třídě <code>Problem</code> definujte magickou metodu <code>__str__</code>, která vrací řetězec <em>Malá násobilka</em>. Obsah řetězce určuje, jak se bude kategorie jmenovat.</p>
+<p><strong>1.4.</strong> Ve třídě <code>Problem</code> definujte metodu <code>generate_problem</code> a zatím ji nechte prázdnou.</p>
+<pre><code class="language-py">from utils.problem_utils.problem_utils import GeneralProblem
+
+
+class Problem(GeneralProblem):
+    def __str__(self) -&gt; str:
+        return &quot;Malá násobilka&quot;
+
+    def generate_problem(self) -&gt; None:
+        pass
+</code></pre>
+<hr />
+<h2 id="2-zaregistrovani-modulu">[2] Zaregistrování modulu</h2>
+<p><strong>2.1.</strong> Do kolekce <code>__all__</code> v&nbsp;modulu <code>__init__.py</code> z&nbsp;balíku <code>problems</code> přidejte položku <code>"basic_multiplication"</code>. Jedná se o&nbsp;řetězec obsahující název nově vytvořeného modulu. Na pořadí položek v&nbsp;kolekci nezáleží.</p>
+<pre><code class="language-py">__all__ = [
+    &quot;matrix_multiplication&quot;,
+    &quot;gauss_jordan&quot;,
+    &quot;inverse_matrix&quot;,
+    &quot;eigen&quot;,
+    &quot;determinant&quot;,
+    &quot;gram_schmidt&quot;,
+    &quot;basic_multiplication&quot;
+]
+</code></pre>
+<p><strong>2.2</strong> Do kolekce <code>__problems_list__</code> v&nbsp;modulu <code>utils/problem_utils/problem_manager.py</code> přidejte položku <code>basic_multiplication.Problem()</code>. Jedná se o&nbsp;třídu definovanou v&nbsp;kroku 1. Pořadí položek v&nbsp;této kolekci určuje pořadí položek ve výběrovém seznamu po zadání příkazu <code>/generate</code>.</p>
+<pre><code class="language-py">problems_list: list[GeneralProblem] = [
+    matrix_multiplication.Problem(),
+    gauss_jordan.Problem(),
+    inverse_matrix.Problem(),
+    eigen.Problem(),
+    determinant.Problem(),
+    gram_schmidt.Problem(),
+    basic_multiplication.Problem()
+]
+</code></pre>
+<p><strong>2.3.</strong> Kategorie je nyní vidět ve výběrovém seznamu a lze ji zvolit. Generování příkladů ale nic nedělá, protože tělo metody <code>generate_problem</code> je prázdné.</p>
+<p><img alt="h" src="../../img/040403.png" /></p>
+<hr />
+<h2 id="3-definice-logiky-generace-prikladu">[3] Definice logiky generace příkladů</h2>
+<p><strong>3.1.</strong> Vraťte se do modulu <code>basic_multiplication.py</code> z&nbsp;balíku <code>problems</code>.</p>
+<p><strong>3.2.</strong> V&nbsp;metodě <code>generate_problem</code> do proměnných <code>self.task</code> a <code>self.answer</code> uložte text zadání a text řešení vygenerovaného příkladu.</p>
+<p>Pokud uživatel klikne na tlačítko <strong>🧮&nbsp;Generovat příklad</strong> nebo <strong>🆕&nbsp;Nový příklad</strong>, zavolá se metoda <code>generate_problem</code> a obsah řetězce <code>self.task</code> je zobrazen uživateli. Po kliknutí na tlačítko <strong>🛂&nbsp;Zobrazit výsledek</strong> se text zprávy změní na obsah řetězce <code>self.answer</code>.</p>
+<p>Cílem je tedy uvnitř metody nejprve náhodně vygenerovat hodnoty pro příklad a ty pak v&nbsp;čitelné formě dosadit do zmíněných řetězců:</p>
+<pre><code class="language-py">def generate_problem(self) -&gt; None:
+    a = random.randint(1, 9)
+    b = random.randint(1, 9)
+    self.task = f&quot;{a} ⋅ {b} = ?&quot;
+    self.answer = f&quot;{a} ⋅ {b} = {a * b}&quot;
+</code></pre>
+<p><strong>3.3.</strong> Nyní funguje generování příkladů a zobrazení výsledků.</p>
+<p><img alt="h" src="../../img/040404.png" /></p>
+<p>Ve třídě lze definovat další pomocné metody, které se použijí v&nbsp;metodě <code>generate_problem</code>. Pokud chcete stejnou logiku používat ve více kategoriích, pak můžete definovat pomocné funkce v&nbsp;modulu <code>utils/problem_utils/problem_utils.py</code>.</p>
+<hr />
+<h2 id="vykresleni-matematickych-vyrazu-v-rozhrani-generatoru-prikladu">Vykreslení matematických výrazů v&nbsp;rozhraní generátoru příkladů</h2>
+<p>Pokud se v&nbsp;řetězci <code>self.task</code> nebo <code>self.answer</code> za sebou nachází tři symboly dolaru <code>$$$</code>, vše za nimi je bráno jako matematický výraz, který je vykreslen. Zpětné lomítko je v&nbsp;jazyce Python únikovým znakem a je tedy potřeba ho v&nbsp;řetězci psát dvakrát – např. <code>\\cdot</code> namísto <code>\cdot</code>.</p>
+<pre><code class="language-py">def generate_problem(self) -&gt; None:
+    a = random.randint(1, 9)
+    b = random.randint(1, 9)
+    self.task = f&quot;Spočítejte součin:$$${a}\\cdot{b}=?&quot;
+    repeated_addition = &quot;+&quot;.join(f&quot;{a}&quot; for _ in range(b))
+    self.answer = f&quot;{self.task[:-1]}{repeated_addition}={a * b}&quot;
+</code></pre>
+<p><img alt="h" src="../../img/040405.png" /></p>
+<hr />
+<h2 id="pridani-tutorialu-pro-vypocet-prikladu">Přidání tutoriálu pro výpočet příkladů</h2>
+<p>Obsah tutoriálu pro výpočet příkladů z&nbsp;určité kategorie je čten z&nbsp;Markdown souboru a odesílán do textového kanálu. Soubor se nachází v&nbsp;adresáři <code>_static/problems/</code>, jeho přípona musí být <code>.MD</code> (velkými písmeny) a jeho název musí být stejný jako název dané kategorie, který je definován v&nbsp;magické metodě <code>__str__</code>.</p>
+<p><img alt="h" src="../../img/040406.png" /></p>
+<p>Tutoriálové Markdown soubory nejsou děleny na témata a podtémata jako u&nbsp;výkladu teorie. Do textového kanálu je po stisknutí tlačítka <strong>❔&nbsp;Jak počítat</strong> vždy odeslán celý obsah souboru.</p>
+<hr />
+<h2 id="pridani-kategorie-prikladu-pouze-s-tutorialem-bez-moznosti-generace">Přidání kategorie příkladů pouze s&nbsp;tutoriálem bez možnosti generace</h2>
+<p>Pokud není k&nbsp;vybrané kategorii příkladů dostupný tutoriál pro výpočet, tlačítko <strong>❔&nbsp;Jak počítat</strong> je vypnuté. Pokud si přejete pro svou kategorii dodat pouze tutoriál pro výpočet bez možnosti generace příkladů, pak je možný i stav, kdy je vypnuté tlačítko pro generaci. Pro tento stav přidejte do třídy <code>Problem</code> metodu <code>can_generate_problem</code>, která vrací <code>False</code>.</p>
+<pre><code class="language-py">from utils.problem_utils.problem_utils import GeneralProblem
+
+
+class Problem(GeneralProblem):
+    def __str__(self) -&gt; str:
+        return &quot;Malá násobilka&quot;
+
+    def can_generate_problem(self) -&gt; bool:
+        return False
+
+    def generate_problem(self) -&gt; None:
+        pass
+</code></pre>
+<p><img alt="h" src="../../img/040407.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../2vlastniteorie/" class="btn btn-neutral float-left" title="Vlastní téma pro výklad teorie"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2vlastniteorie/" class="btn btn-neutral float-left" title="Vlastní témata pro výklad teorie"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>

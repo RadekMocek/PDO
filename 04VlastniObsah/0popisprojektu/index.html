@@ -79,16 +79,34 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/2slashsync/">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Struktura projektu</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cogs">cogs/</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#d_modules">d_modules/</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#utils">utils/</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#utilsproblem_utils">utils/problem_utils/</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_database">_database/</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_logs">_logs/</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_static">_static/</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1markdownpravidla/">Pravidla pro zápis Markdown souborů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../2vlastniteorie/">Vlastní téma pro výklad teorie</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2vlastniteorie/">Vlastní témata pro výklad teorie</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../3vlastnipriklady/">Vlastní kategorie příkladů</a>
                   </li>
@@ -119,21 +137,21 @@
               
                 <h1 id="struktura-projektu">Struktura projektu</h1>
 <p>Tato sekce stručně popisuje strukturu souborů projektu LingeBot.</p>
-<p>Při spuštění bota jste se již seznámili se soubory <code>config.json</code>, <code>db_init.py</code> a <code>run.py</code>. Další Python moduly, které zajišťují funkčnost bota, se nachází v&nbsp;adresářích <code>cogs/</code>, <code>d_modules/</code> a <code>utils/</code>. Zbylé adresáře, ve kterých se nachází „nepythonovské“ soubory, se nazývají <code>_database/</code>, <code>_logs/</code> a <code>_static/</code>.</p>
-<p>Pro rozšíření bota o vlastní teoretické materiály a kategorie příkladů je důležitý adresář <code>_static/</code> a podadresář <code>utils/problem_utils/</code>:</p>
+<p>Při <a href="../../03ProvozVlastniInstance/1prvnispusteni/">spuštění bota</a> jste se již seznámili se soubory <code>config.json</code>, <code>db_init.py</code> a <code>run.py</code>. Další Python moduly, které zajišťují funkčnost bota, se nachází v&nbsp;adresářích <code>cogs/</code>, <code>d_modules/</code> a <code>utils/</code>. Zbylé adresáře, ve kterých se nachází „nepythonovské“ soubory, se nazývají <code>_database/</code>, <code>_logs/</code> a <code>_static/</code>.</p>
+<p>Pro rozšíření bota o&nbsp;vlastní teoretické materiály a kategorie příkladů je důležitý adresář <code>_static/</code> a podadresář <code>utils/problem_utils/</code>:</p>
 <p><img alt="h" src="../../img/040101.png" /></p>
 <hr />
 <h2 id="cogs"><!--Adresář --><em>cogs/</em></h2>
-<p>Adresář <code>cogs/</code> obsahuje moduly, které zajišťují převážně obsluhu příkazů. Na zadané příkazy se sice reaguje zde, obvykle je ale jejich obsluha předána do funkcí modulů v&nbsp;adresářích <code>d_modules/</code> nebo rovnou <code>utils/</code>, kde se provede hlavní logika obsluhy.</p>
+<p>Adresář <code>cogs/</code> obsahuje moduly, které zajišťují převážně obsluhu podpůrných příkazů. Na zadané příkazy se sice reaguje zde, obvykle je ale jejich obsluha předána do funkcí modulů v&nbsp;adresářích <code>d_modules/</code> nebo rovnou <code>utils/</code>, kde se provede hlavní logika obsluhy.</p>
 <hr />
 <h2 id="d_modules"><!--Adresář --><em>d_modules/</em></h2>
-<p>Adresář <code>d_modules/</code> obsahuje moduly závislé na platformě Discord. Nachází se zde funkcionalita pro obsluhu uživatelských rozhraní jednotlivých příkazů, funkce pro práci se zprávami, kontrola oprávnění, ale i definice samotného bota.</p>
+<p>Adresář <code>d_modules/</code> obsahuje moduly závislé na platformě Discord. Nachází se zde funkce pro obsluhu uživatelských rozhraní jednotlivých příkazů, práci se zprávami, kontrolu oprávnění, ale i&nbsp;definici samotného bota.</p>
 <hr />
 <h2 id="utils"><!--Adresář --><em>utils/</em></h2>
-<p>Adresář <code>utils/</code> obsahuje moduly nezávislé na platformě Discord. Probíhá zde práce s databází a se soubory, vykreslování matematických výrazů a generace příkladů.</p>
+<p>Adresář <code>utils/</code> obsahuje moduly nezávislé na platformě Discord. Probíhá zde práce s&nbsp;databází a se soubory, vykreslování matematických výrazů a generace příkladů.</p>
 <h3 id="utilsproblem_utils"><em>utils/problem_utils/</em></h3>
+<p>Podadresář <code>utils/problem_utils/</code> obsahuje vše potřebné pro generaci příkladů. Nachází se zde balík <code>problems</code> (pod-podadresář), v&nbsp;němž každý modul reprezentuje jednu kategorii příkladů. Vedle tohoto balíku se nachází modul <code>problem_manager.py</code>, který pomáhá zajistit, aby se jednotlivé kategorie příkladů dostaly až do rozhraní ke koncovému uživateli, a modul <code>problem_utils.py</code>, který obsahuje společnou logiku pro více kategorií.</p>
 <p><img alt="h" src="../../img/040102.png" /></p>
-<p>Podadresář <code>utils/problem_utils/</code> obsahuje vše potřebné pro generaci příkladů. Nachází se zde balík <code>problems</code> (pod-podadresář), v němž každý modul reprezentuje jednu kategorii příkladu. Vedle tohoto balíku se nachází modul <code>problem_manager.py</code>, který pomáhá zajistit, aby se jednotlivé kategorie příkladů dostaly až k uživateli, a modul <code>problem_utils.py</code>, který obsahuje společnou logiku pro více kategorií.</p>
 <hr />
 <h2 id="_database"><!--Adresář --><em>_database/</em></h2>
 <p>Adresář <code>_database/</code> obsahuje embedded databázi SQLite, kde jsou uložena nastavená barevná schémata, identifikátory rolí LingeMod a nastavení oprávnění pro jednotlivé servery.</p>
@@ -142,14 +160,14 @@
 <p>Adresář <code>_logs/</code> obsahuje logovací soubory. Pokud při běhu bota někde nastane chyba, tak by zde měla být zaznamenána.</p>
 <hr />
 <h2 id="_static"><!--Adresář --><em>_static/</em></h2>
-<p>Adresář <code>_static/</code> obsahuje Markdown soubory s příponou <code>.MD</code> (písmena musí být velká).</p>
+<p>Adresář <code>_static/</code> obsahuje Markdown soubory s&nbsp;příponou <code>.MD</code> (písmena musí být velká).</p>
+<p>V podadresáři <code>_static/problems/</code> se nachází Markdown soubory s&nbsp;tutoriály pro výpočet jednotlivých kategorií příkladů.</p>
 <p>V podadresáři <code>_static/theory/</code> se nachází Markdown soubory obsahující jednotlivá témata pro výklad teorie.</p>
-<p>V podadresáři <code>_static/problems/</code> se nachází Markdown soubory s tutoriály pro výpočet jednotlivých kategorií příkladů.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../03ProvozVlastniInstance/3docker/" class="btn btn-neutral float-left" title="Spuštění v prostředí Docker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../03ProvozVlastniInstance/3docker/" class="btn btn-neutral float-left" title="Spuštění v&nbsp;prostředí Docker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../1markdownpravidla/" class="btn btn-neutral float-right" title="Pravidla pro zápis Markdown souborů">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 

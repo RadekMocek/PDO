@@ -65,6 +65,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../1explain/">/explain – Výklad teorie</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">/generate – Generace příkladů</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#princip-prikazu-generate">Princip příkazu /generate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rozhrani-prikazu-generate">Rozhraní příkazu /generate</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../3render/">/render – Vykreslování matematiky</a>
                   </li>
@@ -79,7 +85,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/2slashsync/">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -88,7 +94,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/1markdownpravidla/">Pravidla pro zápis Markdown souborů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/2vlastniteorie/">Vlastní téma pro výklad teorie</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/2vlastniteorie/">Vlastní témata pro výklad teorie</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../04VlastniObsah/3vlastnipriklady/">Vlastní kategorie příkladů</a>
                   </li>
@@ -122,7 +128,7 @@
 <p>Po odeslání příkazu <code>/generate</code> se v&nbsp;textovém kanálu objeví rozhraní pro generování příkladů. Nejprve se objeví výběrový seznam dostupných kategorií příkladů. Uživatel si vybere kategorii, která ho zajímá. Po zvolení kategorie si uživatel pomocí tlačítek může buď nechat vygenerovat první příklad, nebo zobrazit návod pro výpočet příkladů z&nbsp;dané kategorie.</p>
 <p>Po vygenerování příkladu je zpráva upravena a obsahuje textové zadání příkladu s&nbsp;případným obrázkem. Uživatel může pomocí tlačítek zobrazit výsledek nebo vygenerovat nový příklad.</p>
 <p>Návod pro vypočítání příkladu funguje na stejném principu jako výklad teorie. Zprávy s&nbsp;návodem jsou postupně odeslány do textového kanálu.</p>
-<p>Pokud pro danou kategorii příkladů není návod dostupný, tlačítko pro jeho zobrazení nebude dostupné. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.</p>
+<p>Pokud pro danou kategorii příkladů není návod dostupný, pak bude tlačítko pro jeho zobrazení vypnuté. Opačný případ, kdy je dostupný pouze návod, ale ne generace, je také možný.</p>
 <hr />
 <h2 id="rozhrani-prikazu-generate">Rozhraní příkazu <code>/generate</code></h2>
 <p>Výběr kategorie příkladů z&nbsp;výběrového seznamu:<br>

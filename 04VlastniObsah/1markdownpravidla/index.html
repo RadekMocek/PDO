@@ -79,7 +79,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/2slashsync/">Synchronizace příkazů</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v prostředí Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03ProvozVlastniInstance/3docker/">Spuštění v&nbsp;prostředí Docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Přidání vlastního obsahu</span></p>
@@ -87,8 +87,18 @@
                   <li class="toctree-l1"><a class="reference internal" href="../0popisprojektu/">Struktura projektu</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Pravidla pro zápis Markdown souborů</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#obecna-pravidla-pro-markdown-na-platforme-discord">Obecná pravidla pro Markdown na platformě Discord</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vykresleni-matematickych-vyrazu-v-markdown-souborech">Vykreslení matematických výrazů v&nbsp;Markdown souborech</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#horni-a-dolni-indexy-v-markdown-souborech">Horní a dolní indexy v&nbsp;Markdown souborech</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#obrazky-v-markdown-souborech">Obrázky v&nbsp;Markdown souborech</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../2vlastniteorie/">Vlastní téma pro výklad teorie</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2vlastniteorie/">Vlastní témata pro výklad teorie</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../3vlastnipriklady/">Vlastní kategorie příkladů</a>
                   </li>
@@ -117,13 +127,166 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="markdown-soubory-a-pravidla-pro-jejich-zapis">Markdown soubory a pravidla pro jejich zápis</h1>
+<p>Tato sekce popisuje, co jsou Markdown soubory a jaká jsou pravidla pro jejich zápis v&nbsp;ekosystému LingeBota. Tyto soubory se používají pro tvorbu teoretických materiálů (příkaz <code>/explain</code>) a tutoriálů pro počítaní příkladů (příkaz <code>/generate</code>). Tato sekce obsahuje obecná pravidla, která platí pro obě oblasti použití Markdown souborů.</p>
+<p>Markdown je odlehčený značkovací jazyk. Markdown soubory jsou textové soubory, ve kterých lze – podle určitých pravidel zápisu – změnit formátování částí textu. Formátováním se myslí např. kurzíva, tučné písmo, nadpisy, odrážkové seznamy, odkazy a obrázky.</p>
+<p>Syntax jazyka Markdown není příliš standardizovaná a Discord má tedy svou sadu pravidel a podporovaných formátování. LingeBot do něj navíc nějaké funkce přidává. Soubory musí mít příponu <code>.MD</code> (velkými písmeny), aby je mohl LingeBot najít. Pro jejich tvorbu lze použít jakýkoliv textový editor, např. VS Code s&nbsp;rozšířením <a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint" target="_blank">markdownlint</a>.</p>
+<hr />
+<h2 id="obecna-pravidla-pro-markdown-na-platforme-discord">Obecná pravidla pro Markdown na platformě Discord</h2>
+<p>Tato tabulka obsahuje dostupné Markdown formátování na platformě Discord:</p>
+<table>
+<thead>
+<tr>
+<th>Název</th>
+<th>Vstup</th>
+<th>Výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kurzíva</td>
+<td><code>_text_</code> nebo <code>*text*</code></td>
+<td><em>text</em></td>
+</tr>
+<tr>
+<td>Tučné</td>
+<td><code>**text**</code></td>
+<td><strong>text</strong></td>
+</tr>
+<tr>
+<td>Podtržené</td>
+<td><code>__text__</code></td>
+<td><u>text</u></td>
+</tr>
+<tr>
+<td>Spoiler</td>
+<td><code>&#124;&#124;text&#124;&#124;</code></td>
+<td><span class="spoiler">text</span></td>
+</tr>
+<tr>
+<td>Odkaz</td>
+<td><code>[text](https://example.com)</code></td>
+<td><a href="https://example.com" target="_blank">text</a></td>
+</tr>
+<tr>
+<td>Nadpis<br>první úrovně</td>
+<td><code># text</code></td>
+<td><h1 style="margin-bottom:0">text</h1></td>
+</tr>
+<tr>
+<td>Nadpis<br>druhé úrovně</td>
+<td><code>## text</code></td>
+<td><h2 style="margin-bottom:0">text</h2></td>
+</tr>
+<tr>
+<td>Nadpis<br>třetí úrovně</td>
+<td><code>### text</code></td>
+<td><h3 style="margin-bottom:0">text</h3></td>
+</tr>
+<tr>
+<td>Nečíslovaný<br>seznam</td>
+<td><code>* Alice</code><br><code>* Bob</code></td>
+<td><ul style="margin-bottom:0"><li>Alice</li><li>Bob</li></ul></td>
+</tr>
+<tr>
+<td>Číslovaný<br>seznam</td>
+<td><code>1. Alice</code><br><code>1. Bob</code></td>
+<td><ol style="margin-bottom:0"><li>Alice</li><li>Bob</li></ol></td>
+</tr>
+<tr>
+<td>Zdrojový kód</td>
+<td><code>&#96;text&#96;</code> pro jednořádkový<br><code>&#96;&#96;&#96;text&#96;&#96;&#96;</code> pro víceřádkový</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>Citace</td>
+<td><code>&gt; text</code> pro jednořádkovou<br><code>&gt;&gt;&gt; text</code> pro víceřádkovou</td>
+<td><blockquote style="margin-bottom:0">text</blockquote></td>
+</tr>
+</tbody>
+</table>
+<h2 id="vykresleni-matematickych-vyrazu-v-markdown-souborech">Vykreslení matematických výrazů v&nbsp;Markdown souborech</h2>
+<p>LingeBot přidává možnost psaní matematických výrazů v&nbsp;Markdown souborech. Když bot odesílá zprávy z&nbsp;tohoto souboru do textového kanálu, část se zapsaným matematickým výrazem je nahrazena obrázkem, ve kterém je výraz vykreslen. Styl zápisu matematických výrazů je <a href="../../02HlavniInstance/3render/#pravidla-pro-zapis-matematickych-vyrazu">stejný jako u&nbsp;příkazu <code>/render</code></a>.</p>
+<p>Pro zápis matematického výrazu:</p>
+<ul>
+<li>Na samostatný řádek napište <code>$$$render</code></li>
+<li>Na další řádky napište požadovaný výraz</li>
+<li>Zápis ukončete napsáním <code>$$</code> opět na samostatný řádek</li>
+</ul>
+<p><strong><em>Např.:</em></strong></p>
+<pre><code class="language-md">Běžný text ...
+
+$$$render
+[a,b;c,d]
+$$
+
+... běžný text pokračuje.
+</code></pre>
+<p><strong><em>se vykreslí jako:</em></strong></p>
+<p>Běžný text ...</p>
+<p><img alt="s" src="../../img/svg/k8i10UcZBH.svg" /></p>
+<p>... běžný text pokračuje.</p>
+<hr />
+<h2 id="horni-a-dolni-indexy-v-markdown-souborech">Horní a dolní indexy v&nbsp;Markdown souborech</h2>
+<p>LingeBot přidává možnost psaní horních a dolních indexů v&nbsp;Markdown souborech. Horní index se v&nbsp;textu označuje pomocí HTML značky <code>&lt;sup&gt;</code> a dolní index pomocí HTML značky <code>&lt;sub&gt;</code>.</p>
+<p>Discord sám o&nbsp;sobě horní a dolní indexy nepodporuje, proto jsou obsahy značek převedeny na Unicode znaky. Může se ale stát, že daný Unicode znak ve verzi horního/dolního indexu neexistuje. Protože dolních indexů je v&nbsp;sadě Unicode méně, bot při zpracování textu naformátuje neexistující znaky, které jsou označené jako dolní index, jako jednořádkový zdrojový kód. Díky tomu se text více odlišuje od zbytku a tváří se jako pomocný symbol. U&nbsp;neexistujících znaků ve verzi horního indexu žádný takovýto mechanismus není a z&nbsp;implementačních důvodů je text odeslán ve formátu TeX, viz tabulka:</p>
+<table>
+<thead>
+<tr>
+<th>Vstup</th>
+<th>Výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(_a_ + _b_)&lt;sup&gt;2&lt;/sup&gt;</code></td>
+<td>(<em>a</em> + <em>b</em>)²</td>
+</tr>
+<tr>
+<td><code>2&lt;sub&gt;a&lt;/sub&gt;</code></td>
+<td>2ₐ</td>
+</tr>
+<tr>
+<td><code>2&lt;sup&gt;a&lt;/sup&gt;</code></td>
+<td>2ᵃ</td>
+</tr>
+<tr>
+<td><code>2&lt;sub&gt;Ω&lt;/sub&gt;</code></td>
+<td>2<code>Ω</code></td>
+</tr>
+<tr>
+<td><code>2&lt;sup&gt;Ω&lt;/sup&gt;</code></td>
+<td>2^{Ω}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="obrazky-v-markdown-souborech">Obrázky v&nbsp;Markdown souborech</h2>
+<p>Do Markdown souborů lze vkládat obrázky z&nbsp;internetu. Pro jejich korektní umístění ve výsledném odeslaném textu musí být jejich odkazy vloženy mezi „dvoudolary“ podobně jako u&nbsp;vykreslování matematických výrazů:</p>
+<ul>
+<li>Na samostatný řádek napište <code>$$</code></li>
+<li>Na samostatný řádek vložte internetový odkaz na daný obrázek</li>
+<li>Zápis ukončete napsáním <code>$$</code> opět na samostatný řádek</li>
+</ul>
+<p><strong><em>Např.:</em></strong></p>
+<pre><code class="language-md">Běžný text ...
+
+$$
+https://radekmocek.github.io/PDO/img/010302.png
+$$
+
+... běžný text pokračuje.
+</code></pre>
+<p><strong><em>se vykreslí jako:</em></strong></p>
+<p>Běžný text ...</p>
+<p><img alt="w" src="https://radekmocek.github.io/PDO/img/010302.png" /></p>
+<p>... běžný text pokračuje.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../0popisprojektu/" class="btn btn-neutral float-left" title="Struktura projektu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../2vlastniteorie/" class="btn btn-neutral float-right" title="Vlastní téma pro výklad teorie">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../2vlastniteorie/" class="btn btn-neutral float-right" title="Vlastní témata pro výklad teorie">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
