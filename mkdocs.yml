@@ -32,7 +32,7 @@ nav:
     - Vytvoření aplikace na Discord Developer Portal: 03ProvozVlastniInstance/0vytvoreniaplikacenaddp.md
     - Stažení zdrojových kódů a první spuštění: 03ProvozVlastniInstance/1prvnispusteni.md
     - Synchronizace příkazů: 03ProvozVlastniInstance/2slashsync.md
-    - Spuštění v prostředí Docker: 03ProvozVlastniInstance/3docker.md
+    - Spuštění v&nbsp;prostředí Docker: 03ProvozVlastniInstance/3docker.md
   - Přidání vlastního obsahu:
     - Struktura projektu: 04VlastniObsah/0popisprojektu.md
     - Pravidla pro zápis Markdown souborů: 04VlastniObsah/1markdownpravidla.md

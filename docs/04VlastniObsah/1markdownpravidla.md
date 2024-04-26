@@ -1,10 +1,10 @@
 # Markdown soubory a pravidla pro jejich zápis
 
-Tato sekce popisuje, co jsou Markdown soubory a jaká jsou pravidla pro jejich zápis v ekosystému LingeBota. Tyto soubory se používají pro tvorbu teoretických materiálů (příkaz `/explain`) a tutoriálů pro počítaní příkladů (příkaz `/generate`). Tato sekce obsahuje obecná pravidla, která platí pro obě oblasti použití Markdown souborů.
+Tato sekce popisuje, co jsou Markdown soubory a jaká jsou pravidla pro jejich zápis v&nbsp;ekosystému LingeBota. Tyto soubory se používají pro tvorbu teoretických materiálů (příkaz `/explain`) a tutoriálů pro počítaní příkladů (příkaz `/generate`). Tato sekce obsahuje obecná pravidla, která platí pro obě oblasti použití Markdown souborů.
 
 Markdown je odlehčený značkovací jazyk. Markdown soubory jsou textové soubory, ve kterých lze – podle určitých pravidel zápisu – změnit formátování částí textu. Formátováním se myslí např. kurzíva, tučné písmo, nadpisy, odrážkové seznamy, odkazy a obrázky.
 
-Syntax jazyka Markdown není příliš standardizovaná a Discord má tedy svou sadu pravidel a podporovaných formátování. LingeBot navíc nějaké funkce do Markdownu přidává. Soubory musí mít příponu `.MD` (velkými písmeny), aby je mohl LingeBot najít. Pro jejich tvorbu lze použít jakýkoliv textový editor, např. VS Code s rozšířením <a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint" target="_blank">markdownlint</a>.
+Syntax jazyka Markdown není příliš standardizovaná a Discord má tedy svou sadu pravidel a podporovaných formátování. LingeBot do něj navíc nějaké funkce přidává. Soubory musí mít příponu `.MD` (velkými písmeny), aby je mohl LingeBot najít. Pro jejich tvorbu lze použít jakýkoliv textový editor, např. VS Code s&nbsp;rozšířením <a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint" target="_blank">markdownlint</a>.
 
 ---
 
@@ -29,7 +29,7 @@ Citace|`> text` pro jednořádkovou<br>`>>> text` pro víceřádkovou|<blockquot
 
 ## Vykreslení matematických výrazů v&nbsp;Markdown souborech
 
-LingeBot přidává možnost psaní matematických výrazů v Markdown souborech. Když bot odesílá zprávy z tohoto souboru do textového kanálu, část se zapsaným matematickým výrazem je nahrazena obrázkem, ve kterém je výraz vykreslen. Styl zápisu matematických výrazů je [stejný jako u příkazu `/render`](../02HlavniInstance/3render.md/#pravidla-pro-zapis-matematickych-vyrazu).
+LingeBot přidává možnost psaní matematických výrazů v&nbsp;Markdown souborech. Když bot odesílá zprávy z&nbsp;tohoto souboru do textového kanálu, část se zapsaným matematickým výrazem je nahrazena obrázkem, ve kterém je výraz vykreslen. Styl zápisu matematických výrazů je [stejný jako u&nbsp;příkazu `/render`](../02HlavniInstance/3render.md/#pravidla-pro-zapis-matematickych-vyrazu).
 
 Pro zápis matematického výrazu:
 
@@ -59,11 +59,11 @@ Běžný text ...
 
 ---
 
-## Horní a dolní indexy v Markdown souborech
+## Horní a dolní indexy v&nbsp;Markdown souborech
 
-LingeBot přidává možnost psaní horních a dolních indexů v Markdown souborech. Horní index se v&nbsp;textu označuje pomocí HTML značky `<sup>` a dolní index pomocí HTML značky `<sub>`.
+LingeBot přidává možnost psaní horních a dolních indexů v&nbsp;Markdown souborech. Horní index se v&nbsp;textu označuje pomocí HTML značky `<sup>` a dolní index pomocí HTML značky `<sub>`.
 
-Discord sám o sobě horní a dolní indexy nepodporuje, proto jsou obsahy značek převedeny na Unicode znaky. Může se ale stát, že daný Unicode znak ve verzi horního/dolního indexu neexistuje. Protože dolních indexů je v sadě Unicode méně, bot při zpracování textu naformátuje neexistující znaky, které jsou označené jako dolní index, jako jednořádkový zdrojový kód. Díky tomu se text více odlišuje od zbytku a tváří se jako pomocný symbol. U neexistujících znaků ve verzi horního indexu žádný takovýto mechanismus není a z implementačních důvodů je text odeslán ve formátu TeX, viz tabulka:
+Discord sám o&nbsp;sobě horní a dolní indexy nepodporuje, proto jsou obsahy značek převedeny na Unicode znaky. Může se ale stát, že daný Unicode znak ve verzi horního/dolního indexu neexistuje. Protože dolních indexů je v&nbsp;sadě Unicode méně, bot při zpracování textu naformátuje neexistující znaky, které jsou označené jako dolní index, jako jednořádkový zdrojový kód. Díky tomu se text více odlišuje od zbytku a tváří se jako pomocný symbol. U&nbsp;neexistujících znaků ve verzi horního indexu žádný takovýto mechanismus není a z&nbsp;implementačních důvodů je text odeslán ve formátu TeX, viz tabulka:
 
 Vstup|Výstup
 ---|---
@@ -75,9 +75,9 @@ Vstup|Výstup
 
 ---
 
-## Obrázky v Markdown souborech
+## Obrázky v&nbsp;Markdown souborech
 
-Do Markdown souborů lze vkládat obrázky z internetu. Pro jejich korektní umístění ve výsledném odeslaném textu musí být jejich odkazy vloženy mezi „dvoudolary“ podobně jako u vykreslování matematických výrazů:
+Do Markdown souborů lze vkládat obrázky z&nbsp;internetu. Pro jejich korektní umístění ve výsledném odeslaném textu musí být jejich odkazy vloženy mezi „dvoudolary“ podobně jako u&nbsp;vykreslování matematických výrazů:
 
 * Na samostatný řádek napište `$$`
 * Na samostatný řádek vložte internetový odkaz na daný obrázek

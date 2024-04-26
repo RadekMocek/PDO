@@ -55,11 +55,11 @@ __11.__ Uložte kliknutím na tlačítko _Save Changes_.
 
 ![h](../img/030107_Save.png)
 
-__12.__ V části _TOKEN_ klikněte na tlačítko _Reset Token_, potvrďte tlačítkem _Yes, do it!_, poté zadejte své heslo a potvrďte tlačítkem _Submit_.
+__12.__ V&nbsp;části _TOKEN_ klikněte na tlačítko _Reset Token_, potvrďte tlačítkem _Yes, do it!_, poté zadejte své heslo a potvrďte tlačítkem _Submit_.
 
 ![h](../img/030112.png)
 
-__13.__ V části _TOKEN_ se objevil token vašeho bota. Kliknutím na tlačítko _Copy_ token zkopírujte a někam si ho uložte. Tento token uchovejte v&nbsp;tajnosti.
+__13.__ V&nbsp;části _TOKEN_ se objevil token vašeho bota. Kliknutím na tlačítko _Copy_ token zkopírujte a někam si ho uložte. Tento token uchovejte v&nbsp;tajnosti.
 
 ![h](../img/030113.png)
 
